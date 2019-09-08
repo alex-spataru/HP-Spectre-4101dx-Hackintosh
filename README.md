@@ -2,6 +2,10 @@
 
 This repo contains the KEXTs, Clover Config and instructions to setup Mac OS Mojave (10.14.1) on an HP Spectre x360 4101dx laptop. Feel free to comment or improve this repository via a pull request.
 
+### Summary & Photo
+
+Allmost everythings works pretty good, I am even using this Hackintosh as my daily driver for the moment. The only real issue is that the integrated WiFi controller does not work, I might try a Broadcom controller in the future.
+
 ### Working
 
 - Intel HD Graphics 5500
