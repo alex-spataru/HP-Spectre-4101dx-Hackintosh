@@ -5,9 +5,10 @@ This repo contains the KEXTs, Clover Config and instructions to setup Mac OS Moj
 ### Working
 
 - Intel HD Graphics 5500
-- Audio
+- Audio (external speakers & headphones, switching is done without errors)
 - Keyboard (`Alt/Option` and `Super/Command` keys need to be switched in `System Preferences -> Keyboard -> Shortcuts -> Modifier Keys`)
 - Bluetooth
+- Battery status
 - Touchpad with three-finger gestures
 - Brigthness control
 
