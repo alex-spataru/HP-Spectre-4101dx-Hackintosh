@@ -8,6 +8,7 @@ This repo contains the KEXTs, Clover Config and instructions to setup Mac OS Moj
 - Audio (external speakers & headphones, switching is done without errors)
 - Keyboard (`Alt/Option` and `Super/Command` keys need to be switched in `System Preferences -> Keyboard -> Shortcuts -> Modifier Keys`)
 - Bluetooth
+- HDMI
 - Battery status
 - Touchpad with three-finger gestures
 - Brigthness control
