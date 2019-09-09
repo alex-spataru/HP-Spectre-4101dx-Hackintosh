@@ -4,7 +4,7 @@ This repo contains the KEXTs, Clover Config and instructions to setup Mac OS Moj
 
 ### Summary & Photo
 
-Allmost everythings works pretty good, I am even using this Hackintosh as my daily driver for the moment. The only real issue is that the integrated WiFi controller does not work, I might try a Broadcom controller in the future.
+Allmost everything works pretty good, I am even using this Hackintosh as my daily driver for the moment. The only real issue is that the integrated WiFi controller does not work, I might try a Broadcom controller in the future.
 
 ![Photo](Photo.jpeg)
 
