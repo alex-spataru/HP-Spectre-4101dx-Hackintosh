@@ -1,82 +1,86 @@
-# Hackintosh files for HP Spectre 4101dx
+# HP Spectre 4101dx
 
-This repo contains the KEXTs, Clover Config and instructions to setup Mac OS Mojave (10.14.1) on an HP Spectre x360 4101dx laptop. Feel free to comment or improve this repository via a pull request.
+This is the guide to install macOS onto the [HP Spectre x360 13-4101](https://support.hp.com/in-en/document/c04746336). 
 
-### Summary & Photo
+**Disclaimer:** This project is still in alpha/beta stage. Proceed at your own risk, and feel free to report issues and contribute to this guide :)
 
-Allmost everything works pretty good, I am even using this Hackintosh as my daily driver for the moment. The only real issue is that the integrated WiFi controller does not work, I might try a Broadcom controller in the future.
+For the moment, I am using this computer with the latest version of macOS Catalina. All KEXTs are installed in the EFI partition so that my macOS installation is as clean as possible.
 
-![Photo](Photo.jpeg)
+## What works:
 
-### Working
+- Display driver
+- HiDPI configuration
+- Touchpad (with native macOS gestures)
+- Battery percentage
+- Brightness controls
+- WiFi via USB dongle (I use a Lynx 500 AC)
+- Internal SSD
+- Camera
+- Bluetooth (out of the box apparently)
 
-- Intel HD Graphics 5500
-- Audio (external speakers & headphones, switching is done without errors)
-- Keyboard (`Alt/Option` and `Super/Command` keys need to be switched in `System Preferences -> Keyboard -> Shortcuts -> Modifier Keys`)
-- Bluetooth
-- USB (pendrives, external mouse & serial devices)
-- HDMI
-- Battery status
-- Touchpad with three-finger gestures
-- Brigthness control
+## In process:
+- Audio via Apple ALC
 
-### Not Working
+## What doesn't work:
+- Intel WiFi
 
-- Intel WiFi controller (for the moment I am using an [Lynx 600 AC USB adapter](https://www.nexxtsolutions.com/connectivity/us_en/networking-solutions/usb-adapters/usb-adapters/aulub605u1), I might try the  BCM94352Z someday).
+## Instalation Guide
 
-## DSDT Patches
+### What you'll need
+- macOS installer (preferably from the App Store, don't use Niresh or other "distros", read [this](https://www.quora.com/Is-niresh-distro-recommended-in-the-hackintosh-community) and [this](https://www.reddit.com/r/hackintosh/comments/3sn6r1/why_is_niresh_bad/) for more information).
+- External WiFi USB dongle.
+- 8 GB or greater USB stick.
+- External Mouse (may be needed during installation).
 
-I have uploaded a copy of my DSDT patches, but it's better if you do the patching for yourself, you may get into weird errors if you don't use the DSDTs from your own laptop.
+**<u>Note</u>**: If you don't have a Mac or another Hackintosh at hand, you can use [gibMacOS scripts](https://github.com/corpnewt/gibMacOS) to download the macOS installer directly from Apple.
 
-Tutorial for DSDT patching: [https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ssdts.152573/](https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ssdts.152573/)
+### BIOS settings
+- Use `F10` to boot into the BIOS setup screen.
+- Disable fast boot and set the TPM Device to `hidden`.
+- If you haven't already, enable USB booting.
 
-The patches that I used are:
+### USB Installer
 
-- *audio* Audio Layout 3
-- *bat* HP G6 2221ss
-- *sys* Fix_WAK Arg0 v2
-- *sys* Fix Mutex with non-zero SyncLevel
-- *sys* HPET Fix
-- *sys* IRQ Fix
-- *sys* SMBUS Fix
-- *sys* OS Check Fix (Windows 7)
-- *sys* OS Check Fix (Windows 8)
+Follow [CorpNewt's](https://github.com/corpnewt) excelent [Vanilla Installation Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/).
 
-If you want to control brightness from the keyboard controls, apply the following patch:
+After installing Clover into your USB stick, open the USB's EFI partition and replace the contents with the data inside the `EFI` folder. At this moment, you should be able to install macOS without any major issues. 
 
-    into method label _Q10 replace_content
-    begin
-    // Brightness Down\n
-    Notify(\_SB.PCI0.LPCB.PS2K, 0x0205)\n
-    Notify(\_SB.PCI0.LPCB.PS2K, 0x0285)\n
-    end;
-    into method label _Q11 replace_content
-    begin
-    // Brightness Up\n
-    Notify(\_SB.PCI0.LPCB.PS2K, 0x0206)\n
-    Notify(\_SB.PCI0.LPCB.PS2K, 0x0286)\n
-    end;
+## Post Instalation
 
-**Note**: If you get an error relating to `_DSM`, just replace `_DSM` with `DSM` in the line where you get the error. Warnings can be ignored.
+1. The first time you boot the computer the `CMD` and `Option` keys will be switched. To fix this issue, open `Preferences/Keyboard/Modifier Keys` and switch the `CMD` and `Option` keys, be sure that you have selected `Keyboard` and not touch screen in the "Select Keyboard" combo box.
+2. Install Clover into your hard disk's EFI partition.
+3. Copy the contents of the `EFI` folder to your system's `EFI` partition.
+4. Install [Wireless USB Adapter](https://github.com/chris1111/Wireless-USB-Adapter-Clover) to be able to use your USB WiFi dongle. 
+5. To setup fractional scaling, use [One-Key HiDPI](https://github.com/xzhih/one-key-hidpi), which generates the appropiate configuration and allows you to configure HiDPI settings directly from the Preferences application.
 
-## KEXTs 
+## ACPI patching
 
-You can find a copy of the KEXTs that I am using in the `KEXTs` folder, `SLE` stands for KEXTs installed in `System/Library/Extensions` and `LE` stands for KEXTs installed in `Library/Extensions`. Be sure to use an appropiate tool like [Kext Utility](http://cvad-mac.narod.ru/index/0-4) to install the kernel extensions.
+For the moment, you can find the compiled DSDT files in the `EFI/CLOVER/ACPI` folder. I have compiled these files long ago when I tried hackintoshing for the first time, and they still work for me. However, this approach is not good, since the DSDT may change from laptop to laptop.
 
-## Clover Configuration
+If I have time, I will compile again the DSDT files and post the modifications that I used here.
 
-You can find my Clover configuration in the `Clover` folder. Important files to copy to your `EFI` partition:
+**<u>Note</u>:** Initially, the brightness keys will require you to input `Fn+F2`/`Fn+F3` keys. This is because macOS does not setup correctly the keyboard shortcuts. To fix this, go to `Preferences/Keyboard Shortcuts/Display` and setup the shortcuts correctly.
 
-- `config.plist` file
-- `kexts` folder
+## KEXTs
 
-**Note:** for the moment, I am using the [`clover-theme-minimal-dark`](https://github.com/ImmersiveX/clover-theme-minimal-dark) theme, I like it more than the default theme.
+These files are included in the `EFI` folder of this repository, however, I believe that it's good practice to list them and their download sources:
 
-## HiDPI Display
+- VirtualSMC ([https://github.com/acidanthera/VirtualSMC](https://github.com/acidanthera/VirtualSMC))
+- Lilu ([https://github.com/acidanthera/Lilu](https://github.com/acidanthera/Lilu))
+- VoodooInput ([https://github.com/acidanthera/VoodooInput](https://github.com/acidanthera/VoodooInput))
+- VoodooPS2 ([https://github.com/acidanthera/VoodooPS2](https://github.com/acidanthera/VoodooPS2))
+- WhateverGreen ([https://github.com/acidanthera/WhateverGreen](https://github.com/acidanthera/WhateverGreen))
+- VoodooTSCSync ([https://github.com/RehabMan/VoodooTSCSync](https://github.com/RehabMan/VoodooTSCSync))
 
-You can use [RDM](https://github.com/avibrazil/RDM) to select a custom HiDPI resolution. If you like the result, you can create an Automator script to call RDM with the appropiate configuration, export it as an application and add it to the Login Items in `System Preferences -> Users & Groups -> Login Items`.
+### Additional KEXTs
 
-## Useful Links
+In the `additional-kexts` folder, you will find the KEXTs that I used to get my USB WiFi dongle (Lynx 500 AC) working in conjunction with [Wireless USB Adapter](https://github.com/chris1111/Wireless-USB-Adapter-Clover), you may need these KEXTs since the official driver is 32-bit only and does not work with Catalina. If you need them, copy them to `EFI/CLOVER/kexts/Other` as well.
 
-- [https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ssdts.152573/](https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ssdts.152573/)
-- [https://www.tonymacx86.com/threads/guide-high-sierra-on-hp-spectre-x360-8th-gen-coffee-lake.251330/](https://www.tonymacx86.com/threads/guide-high-sierra-on-hp-spectre-x360-8th-gen-coffee-lake.251330/)
+## Issues
+
+- If you try to use [VoodooI2C](https://github.com/alexandred/VoodooI2C), you will get a Kernel Panic, always.
+- For some reason, after some time of using Clover, the BIOS boot menu does not show up unless you restore/update the BIOS with a FAT-formatted USB with [HP's USB Recovery Method](https://support.hp.com/ee-en/document/c02693833#usbrecovery).
+- Altough the touchpad/trackpad and the trackpad gestures work, click-and-select does not work, which is kind of annoying. However, you can enable three finger drag to get around that issue.
+
+
+
