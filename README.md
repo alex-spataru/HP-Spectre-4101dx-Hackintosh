@@ -1,4 +1,6 @@
-# HP Spectre 4101dx
+![neofetch output](doc/neofetch.png)
+
+# macOS Catalina with HP Spectre 4101dx
 
 This is the guide to install macOS onto the [HP Spectre x360 13-4101](https://support.hp.com/in-en/document/c04746336). 
 
