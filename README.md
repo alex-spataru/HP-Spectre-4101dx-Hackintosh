@@ -19,6 +19,9 @@ For the moment, I am using this computer with the latest version of macOS Catali
 - Bluetooth (out of the box apparently)
 - Audio via (VoodooHDA)
 
+## In process
+- Touchscreen
+
 ## What doesn't work:
 - Intel WiFi
 
