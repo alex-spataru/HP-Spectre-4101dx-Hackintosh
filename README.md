@@ -17,9 +17,7 @@ For the moment, I am using this computer with the latest version of macOS Catali
 - Internal SSD
 - Camera
 - Bluetooth (out of the box apparently)
-
-## In process:
-- Audio via Apple ALC
+- Audio via (VoodooHDA)
 
 ## What doesn't work:
 - Intel WiFi
@@ -71,6 +69,7 @@ These files are included in the `EFI` folder of this repository, however, I beli
 - VoodooPS2 ([https://github.com/acidanthera/VoodooPS2](https://github.com/acidanthera/VoodooPS2))
 - WhateverGreen ([https://github.com/acidanthera/WhateverGreen](https://github.com/acidanthera/WhateverGreen))
 - VoodooTSCSync ([https://github.com/RehabMan/VoodooTSCSync](https://github.com/RehabMan/VoodooTSCSync))
+- VoodooHDA ([https://github.com/chris1111/VoodooHDA-2.9.2-Clover-V15](https://github.com/chris1111/VoodooHDA-2.9.2-Clover-V15))
 
 ### Additional KEXTs
 
