@@ -20,6 +20,7 @@ For the moment, I am using this computer with the latest version of macOS Catali
 
 ## In process:
 - Audio via Apple ALC
+- Touchscreen
 
 ## What doesn't work:
 - Intel WiFi
