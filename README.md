@@ -1,4 +1,4 @@
-![neofetch output](doc/neofetch.png)
+![neofetch output](doc/terminal.png)
 
 # macOS Catalina with HP Spectre 4101dx
 
