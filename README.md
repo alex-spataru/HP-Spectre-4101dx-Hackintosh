@@ -14,20 +14,19 @@ For the moment, I am using this computer with the latest version of macOS Catali
 - HiDPI configuration
 - Touchpad (with native macOS gestures)
 - Battery percentage
-- Brightness controls
+- Brightness, sound, airplane mode & other keyboard controls
 - WiFi via USB dongle (I use a Lynx 500 AC)
-- Internal SSD
+- Intel WiFi via (itlwm, requires manual SSID/password injection in kext's info.plist)
+- Internal SSD (it still hasn't burned out or something after one year with Hackintosh and 3+ years of Windows/Linux)
 - Camera
 - Bluetooth (out of the box apparently)
 - Audio via (VoodooHDA)
 
 ## In process
 - Touchscreen
-
-## What doesn't work:
 - Intel WiFi
 
-## Instalation Guide
+## Installation Guide
 
 ### What you'll need
 - macOS installer (preferably from the App Store, don't use Niresh or other "distros", read [this](https://www.quora.com/Is-niresh-distro-recommended-in-the-hackintosh-community) and [this](https://www.reddit.com/r/hackintosh/comments/3sn6r1/why_is_niresh_bad/) for more information).
@@ -44,17 +43,16 @@ For the moment, I am using this computer with the latest version of macOS Catali
 
 ### USB Installer
 
-Follow [CorpNewt's](https://github.com/corpnewt) excelent [Vanilla Installation Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/).
+Follow [CorpNewt's](https://github.com/corpnewt) excellent [Vanilla Installation Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/).
 
 After installing Clover into your USB stick, open the USB's EFI partition and replace the contents with the data inside the `EFI` folder. At this moment, you should be able to install macOS without any major issues. 
 
-## Post Instalation
+## Post Installation
 
 1. The first time you boot the computer the `CMD` and `Option` keys will be switched. To fix this issue, open `Preferences/Keyboard/Modifier Keys` and switch the `CMD` and `Option` keys, be sure that you have selected `Keyboard` and not touch screen in the "Select Keyboard" combo box.
 2. Install Clover into your hard disk's EFI partition.
-3. Copy the contents of the `EFI` folder to your system's `EFI` partition.
-4. Install [Wireless USB Adapter](https://github.com/chris1111/Wireless-USB-Adapter-Clover) to be able to use your USB WiFi dongle. 
-5. To setup fractional scaling, use [One-Key HiDPI](https://github.com/xzhih/one-key-hidpi), which generates the appropiate configuration and allows you to configure HiDPI settings directly from the Preferences application.
+3. Copy the contents of the `EFI` folder to your system's `EFI` partition. 
+4. To setup fractional scaling, use [One-Key HiDPI](https://github.com/xzhih/one-key-hidpi), which generates the appropriate configuration and allows you to configure HiDPI settings directly from the Preferences application.
 
 ## ACPI patching
 
@@ -73,8 +71,20 @@ These files are included in the `EFI` folder of this repository, however, I beli
 - VoodooInput ([https://github.com/acidanthera/VoodooInput](https://github.com/acidanthera/VoodooInput))
 - VoodooPS2 ([https://github.com/acidanthera/VoodooPS2](https://github.com/acidanthera/VoodooPS2))
 - WhateverGreen ([https://github.com/acidanthera/WhateverGreen](https://github.com/acidanthera/WhateverGreen))
-- VoodooTSCSync ([https://github.com/RehabMan/VoodooTSCSync](https://github.com/RehabMan/VoodooTSCSync))
 - VoodooHDA ([https://github.com/chris1111/VoodooHDA-2.9.2-Clover-V15](https://github.com/chris1111/VoodooHDA-2.9.2-Clover-V15))
+- itlwm ([https://github.com/zxystd/itlwm](https://github.com/zxystd/itlwm))
+
+## WiFi
+
+#### USB dongle
+
+Install [Wireless USB Adapter](https://github.com/chris1111/Wireless-USB-Adapter-Clover) to be able to use your USB WiFi dongle. If you use the same USB adapter as myself, copy the files from the `Additional-KEXTs` folder.
+
+#### Intel WiFi
+
+The WiFi network card used by this laptop is supported by [itlwm](https://github.com/zxystd/itlwm). However, you need to manually specify the SSID & passwords of the networks you want to connect by modifying the `info.plist` file inside the `itlwm.kext` driver. 
+
+In the future, I would like to use [AppleIntelWifi](https://github.com/AppleIntelWifi/adapter). Since it manages the network card as a native AirPort device, which allows us to join/manage WiFi networks as we would normally do in a Macbook. Also, there is no need to manually input SSIDs in the EFI partition, which is a big bonus in terms of usability.
 
 ### Additional KEXTs
 
@@ -84,7 +94,7 @@ In the `additional-kexts` folder, you will find the KEXTs that I used to get my 
 
 - If you try to use [VoodooI2C](https://github.com/alexandred/VoodooI2C), you will get a Kernel Panic, always.
 - For some reason, after some time of using Clover, the BIOS boot menu does not show up unless you restore/update the BIOS with a FAT-formatted USB with [HP's USB Recovery Method](https://support.hp.com/ee-en/document/c02693833#usbrecovery).
-- Altough the touchpad/trackpad and the trackpad gestures work, click-and-select does not work, which is kind of annoying. However, you can enable three finger drag to get around that issue.
+- Although the touchpad/trackpad and the trackpad gestures work, click-and-select works awfully, which is kind of annoying. However, you can enable three finger drag to get around that issue.
 
 
 
