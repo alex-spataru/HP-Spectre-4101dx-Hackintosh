@@ -30,7 +30,7 @@ For the moment, I am using this computer with the latest version of macOS Catali
 
 ### What you'll need
 - macOS installer (preferably from the App Store, don't use Niresh or other "distros", read [this](https://www.quora.com/Is-niresh-distro-recommended-in-the-hackintosh-community) and [this](https://www.reddit.com/r/hackintosh/comments/3sn6r1/why_is_niresh_bad/) for more information).
-- External WiFi USB dongle.
+- External WiFi USB dongle (optional).
 - 8 GB or greater USB stick.
 - External Mouse (may be needed during installation).
 
@@ -82,7 +82,9 @@ Install [Wireless USB Adapter](https://github.com/chris1111/Wireless-USB-Adapter
 
 #### Intel WiFi
 
-The WiFi network card used by this laptop is supported by [itlwm](https://github.com/zxystd/itlwm). However, you need to manually specify the SSID & passwords of the networks you want to connect by modifying the `info.plist` file inside the `itlwm.kext` driver. 
+The WiFi network card used by this laptop is supported by [itlwm](https://github.com/zxystd/itlwm). However, you may need to manually specify the SSID & passwords of the networks you want to connect by modifying the `info.plist` file inside the `itlwm.kext` driver. 
+
+You can use [HeloPort](https://github.com/zxystd/HeliPort) to manage your WiFi connections with [itlwm](https://github.com/zxystd/itlwm) as a normal user with a normal life. However, the project is still in alpha stage. If you don't want to download Xcode, a build from 23/Jun/2020 is available [here](https://files.gitter.im/5ecde0a9d73408ce4fe4fe2d/jH7z/HeliPort_23_06.zip) 
 
 In the future, I would like to use [AppleIntelWifi](https://github.com/AppleIntelWifi/adapter). Since it manages the network card as a native AirPort device, which allows us to join/manage WiFi networks as we would normally do in a Macbook. Also, there is no need to manually input SSIDs in the EFI partition, which is a big bonus in terms of usability.
 
