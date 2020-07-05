@@ -88,7 +88,7 @@ You can also use [HeliPort](https://github.com/zxystd/HeliPort) to manage your W
 ## Issues
 
 - Although the touchpad/trackpad and the trackpad gestures work, click-and-select works awfully, which is kind of annoying. However, you can enable three finger drag to get around that issue.
-- During the boot process, the fan motors are activated at maximum speed. After some minutes, the fans return to a normal speed and the computer stays relatively cold. However, the noise is pretty annoying.
+- ~~During the boot process, the fan motors are activated at maximum speed. After some minutes, the fans return to a normal speed and the computer stays relatively cold. However, the noise is pretty annoying.~~ It was a mechanical/hardware issue, now the fans run normally.
 
 
 
