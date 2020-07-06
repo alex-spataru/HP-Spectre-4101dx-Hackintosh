@@ -564,7 +564,7 @@
 			<key>PickerAudioAssist</key>
 			<false/>
 			<key>PickerMode</key>
-			<string>Builtin</string>
+			<string>External</string>
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
@@ -707,17 +707,17 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02640609QXGDVVAD</string>
+			<string>C02648401QXG90FJC</string>
 			<key>ROM</key>
 			<data>ESIzRFVm</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
-			<string>MacBookPro12,1</string>
+			<string>MacBookAir7,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02SH7ZXH1DP</string>
+			<string>C02SR0BDGFWK</string>
 			<key>SystemUUID</key>
-			<string>B6A30334-F906-4B37-A633-8509876AE17C</string>
+			<string>EB4B9A57-E219-420F-80B0-4F6A3296AEF2</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
