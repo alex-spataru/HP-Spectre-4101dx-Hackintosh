@@ -30,7 +30,9 @@ For the moment, I am using this computer with the latest version of macOS Catali
 - Audio via (AppleALC)
 
 ## In process
+
 - Touchscreen
+- Sleep
 
 ## Installation Guide
 
@@ -59,6 +61,13 @@ For the moment, I am using this computer with the latest version of macOS Catali
 1. The first time you boot the computer the `CMD` and `Option` keys will be switched. To fix this issue, open `Preferences/Keyboard/Modifier Keys` and switch the `CMD` and `Option` keys, be sure that you have selected `Keyboard` and not touch screen in the "Select Keyboard" combo box.
 2. Copy the contents of the `EFI` folder to your system's `EFI` partition. 
 3. To setup fractional scaling, use [One-Key HiDPI](https://github.com/xzhih/one-key-hidpi), which generates the appropriate configuration and allows you to configure HiDPI settings directly from the Preferences application.
+
+The computer is able to sleep, however, it automatically reboots after attempting to wake it. Since I rarely use this function, the quick and dirty solution was to disable sleep with the following commands:
+
+    sudo pmset -a disksleep 0
+    sudo pmset -a sleep 0
+    sudo pmset -a hibernatemode 0
+    sudo pmset -a disablesleep 1
 
 ## ACPI patching
 
