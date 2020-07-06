@@ -30,7 +30,9 @@ For the moment, I am using this computer with the latest version of macOS Catali
 - Audio via (AppleALC)
 
 ## In process
+
 - Touchscreen
+- Sleep
 
 ## Installation Guide
 
@@ -60,11 +62,18 @@ For the moment, I am using this computer with the latest version of macOS Catali
 2. Copy the contents of the `EFI` folder to your system's `EFI` partition. 
 3. To setup fractional scaling, use [One-Key HiDPI](https://github.com/xzhih/one-key-hidpi), which generates the appropriate configuration and allows you to configure HiDPI settings directly from the Preferences application.
 
+The computer is able to sleep, however, it automatically reboots after attempting to wake it. Since I rarely use this function, the quick and dirty solution was to disable sleep with the following commands:
+
+    sudo pmset -a disksleep 0
+    sudo pmset -a sleep 0
+    sudo pmset -a hibernatemode 0
+    sudo pmset -a disablesleep 1
+
 ## ACPI patching
 
 For the moment, you can find the compiled DSDT files in the `EFI/OC/ACPI` folder. Although [Dortania's Guide](https://dortania.github.io/Getting-Started-With-ACPI/) goes against including the DSDT patches, they were necessary for me to get the trackpad, battery and sound working.
 
-The rest of the patches are done according to the guide.
+The rest of the patches are done according to the guide for Broadwell CPUs.
 
 ## KEXTs
 
