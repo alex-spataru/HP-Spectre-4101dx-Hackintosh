@@ -73,7 +73,7 @@ The computer is able to sleep, however, it automatically reboots after attemptin
 
 For the moment, you can find the compiled DSDT files in the `EFI/OC/ACPI` folder. Although [Dortania's Guide](https://dortania.github.io/Getting-Started-With-ACPI/) goes against including the DSDT patches, they were necessary for me to get the trackpad, battery and sound working.
 
-The rest of the patches are done according to the guide.
+The rest of the patches are done according to the guide for Broadwell CPUs.
 
 ## KEXTs
 
