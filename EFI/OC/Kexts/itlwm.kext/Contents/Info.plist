@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>19F101</string>
+	<string>19G60d</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -27,7 +27,7 @@
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>11E503a</string>
+	<string>11E608c</string>
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
@@ -35,27 +35,13 @@
 	<key>DTSDKName</key>
 	<string>macosx10.15</string>
 	<key>DTXcode</key>
-	<string>1141</string>
+	<string>1150</string>
 	<key>DTXcodeBuild</key>
-	<string>11E503a</string>
+	<string>11E608c</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>itlwm</key>
 		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.zxystd.itlwm</string>
-			<key>IOClass</key>
-			<string>itlwm</string>
-			<key>IOMatchCategory</key>
-			<string>IODefaultMatchCategory</string>
-			<key>IOPCIPrimaryMatch</key>
-			<string>0x00008086&amp;0x0000ffff</string>
-			<key>IOProbeScore</key>
-			<integer>2000</integer>
-			<key>IOProviderClass</key>
-			<string>IOPCIDevice</string>
-			<key>IOUserClientClass</key>
-			<string>ItlNetworkUserClient</string>
 			<key>WiFiConfig</key>
 			<dict>
 				<key>WiFi_1</key>
@@ -87,6 +73,20 @@
 					<string>CMCC-KtG6</string>
 				</dict>
 			</dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.zxystd.itlwm</string>
+			<key>IOClass</key>
+			<string>itlwm</string>
+			<key>IOMatchCategory</key>
+			<string>IODefaultMatchCategory</string>
+			<key>IOPCIPrimaryMatch</key>
+			<string>0x00008086&amp;0x0000ffff</string>
+			<key>IOProbeScore</key>
+			<integer>2000</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+			<key>IOUserClientClass</key>
+			<string>ItlNetworkUserClient</string>
 		</dict>
 	</dict>
 	<key>LSMinimumSystemVersion</key>
