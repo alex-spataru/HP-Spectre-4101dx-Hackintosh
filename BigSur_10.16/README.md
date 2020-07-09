@@ -59,9 +59,7 @@ As with Catalina, the computer is able to sleep. However, it automatically reboo
 
 ## ACPI patching
 
-For the moment, you can find the compiled DSDT files in the `EFI/OC/ACPI` folder. Although [Dortania's Guide](https://dortania.github.io/Getting-Started-With-ACPI/) goes against including the DSDT patches, they were necessary for me to get the trackpad, battery and sound working.
-
-The rest of the patches are done according to the guide for Broadwell CPUs.
+The patches are done according to the guide for Broadwell CPUs. DSDT patch may be necessary to get Trackpad & battery status working.
 
 ## KEXTs
 

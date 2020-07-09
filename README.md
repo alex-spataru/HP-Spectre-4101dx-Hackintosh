@@ -6,8 +6,8 @@ OpenCore configuration files, installation guides and resources to run macOS on 
 
 #### Supported macOS versions
 
-- macOS Catalina (tested with 10.15.5 & 10.15.6, [instalation notes...](Catalina_10.15/README.md))
-- macOS Big Sur (WIP, [instalation notes...](BigSur_10.16/README.md))
+- macOS Catalina (tested with 10.15.5 & 10.15.6, [instalation notes...](Catalina_10.15/))
+- macOS Big Sur (WIP, [instalation notes...](BigSur_10.16/))
 
 #### Credits
 
