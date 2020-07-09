@@ -40,6 +40,20 @@
 1. Follow [CorpNewt's](https://github.com/corpnewt) excellent [Vanilla Installation Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) to get the macOS installer in your USB. **Skip the Clover installation**, we are going to use OpenCore.
 2. Open the USB's EFI partition and replace the contents with the data inside the `EFI-USB` folder. At this moment, you should be able to install macOS.
 
+#### KEXTs used for USB installer
+
+- Lilu (Jun 2020 release)
+- VirtualSMC (Jun 2020 release)
+- WhateverGreen (Jun 2020 release)
+- VoodooPS2Controller (Jun 2020 release)
+
+#### Setup Notes
+
+- The initial GUI installer will be stuck at 3 minutes, ignore until the computer restarts
+- After reboot, the installer will get stuck for 5/10 minutes during the Apple logo and then suddenly reboot
+- Boot again to macOS Catalina Install (on the hardisk, not on USB), installation should finish and reboot
+- At the fourth reboot you will reach the macOS first-time greeter (if everything goes well)
+
 **Note:** if you have used Clover before, I strongly recommend you to clear the NVRAM settings before proceeding!
 
 ## Post Installation
