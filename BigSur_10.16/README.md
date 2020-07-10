@@ -71,6 +71,18 @@ As with Catalina, the computer is able to sleep. However, it automatically reboo
     sudo pmset -a hibernatemode 0
     sudo pmset -a disablesleep 1
 
+#### KEXTs for post-install operation
+
+I strongly recommend you to compile and use the latest versions of:
+
+- Lilu
+- WhateverGreen
+- VirtualSMC
+- VoodooPS2
+- AppleALC
+
+Using a pre-compiled (release) version will not work since Big Sur requires diffent patches & modifications in order to work with your hardware.
+
 ## ACPI patching
 
 The patches are done according to the guide for Broadwell CPUs. DSDT patch may be necessary to get Trackpad & battery status working.

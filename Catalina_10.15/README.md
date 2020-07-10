@@ -16,7 +16,7 @@
 - Internal SSD (it still hasn't burned out or something after one year with Hackintosh and 3+ years of Windows/Linux)
 - Camera
 - Bluetooth
-- Audio via (AppleALC)
+- Audio via (VoodooHDA)
 
 ## In process
 
@@ -72,7 +72,8 @@ These files are included in the `EFI` folder of this repository, however, I beli
 - Lilu ([https://github.com/acidanthera/Lilu](https://github.com/acidanthera/Lilu))
 - VoodooPS2 ([https://github.com/acidanthera/VoodooPS2](https://github.com/acidanthera/VoodooPS2))
 - WhateverGreen ([https://github.com/acidanthera/WhateverGreen](https://github.com/acidanthera/WhateverGreen))
-- AppleALC ([https://github.com/acidanthera/AppleALC](https://github.com/acidanthera/AppleALC))
+- ~AppleALC ([https://github.com/acidanthera/AppleALC](https://github.com/acidanthera/AppleALC))~ (audio works, microphone doesn't)
+- VoodoHDA ([https://github.com/chris1111/VoodooHDA-2.9.2-Clover-V15](https://github.com/chris1111/VoodooHDA-2.9.2-Clover-V15))
 - itlwm ([https://github.com/zxystd/itlwm](https://github.com/zxystd/itlwm))
 
 ## WiFi
