@@ -83,7 +83,7 @@ The computer is able to sleep, however, it automatically reboots after attemptin
 
 Once that the trackpad preference pane is available, ensure that the "Force Click and haptic feedback" checkbox is disabled:
 
-![Disable Haptic Feedback](Screenshots/	DisableHapticFeedback.png)
+![Disable Haptic Feedback](Screenshots/DisableHapticFeedback.png)
 
 Once you set this, trackpad click should work as intended.
       
