@@ -1,3 +1,5 @@
+![About macOS](Screenshots/AboutMacOS.png)
+
 # macOS Catalina 10.15
 
 ### Tested versions:
@@ -47,9 +49,27 @@
 
 ## Post Installation
 
-1. The first time you boot the computer the `CMD` and `Option` keys will be switched. To fix this issue, open `Preferences/Keyboard/Modifier Keys` and switch the `CMD` and `Option` keys, be sure that you have selected `Keyboard` and not touch screen in the "Select Keyboard" combo box.
-2. Copy the contents of the `EFI` folder to your system's `EFI` partition. 
-3. To setup fractional scaling, use [One-Key HiDPI](https://github.com/xzhih/one-key-hidpi), which generates the appropriate configuration and allows you to configure HiDPI settings directly from the Preferences application.
+### Fix swapped CMD/Option keys
+
+The first time you boot the computer the `CMD` and `Option` keys will be switched. To fix this issue, open `Preferences/Keyboard/Modifier Keys` and switch the `CMD` and `Option` keys, be sure that you have selected `Keyboard` and not touch screen in the "Select Keyboard" combo box.
+
+![CMD Key Fix](Screenshots/CmdKeyFix.png)
+
+### Setup EFI partition
+
+Mount your EFI partition, this can be done with the following terminal commands:
+
+![Mount EFI](Screenshots/MountEFI.png)
+
+Copy the contents of the `EFI` folder to your system's `EFI` partition. 
+
+### Fractional Scaling
+
+To setup fractional scaling, use [One-Key HiDPI](https://github.com/xzhih/one-key-hidpi), which generates the appropriate configuration and allows you to configure HiDPI settings directly from the Preferences application.
+
+**NOTE:** You may need to temporally disable SIP for the script to work.
+
+### Disabling sleep
 
 The computer is able to sleep, however, it automatically reboots after attempting to wake it. Since I rarely use this function, the quick and dirty solution was to disable sleep with the following commands:
 
@@ -57,6 +77,23 @@ The computer is able to sleep, however, it automatically reboots after attemptin
     sudo pmset -a sleep 0
     sudo pmset -a hibernatemode 0
     sudo pmset -a disablesleep 1
+    
+    
+### Fixing Trackpad behavior
+
+Once that the trackpad preference pane is available, ensure that the "Force Click and haptic feedback" checkbox is disabled:
+
+![Disable Haptic Feedback](Screenshots/	DisableHapticFeedback.png)
+
+Once you set this, trackpad click should work as intended.
+      
+### WiFi Network management with HeliPort
+
+The WiFi network card used by this laptop is supported by [itlwm](https://github.com/zxystd/itlwm). 
+
+However, you will to manually specify the SSID & passwords of the networks you want to connect by modifying the `info.plist` file inside the `itlwm.kext` driver. 
+
+You can also use [HeliPort](https://github.com/zxystd/HeliPort) to manage your WiFi connections with [itlwm](https://github.com/zxystd/itlwm) as a normal user with a normal life. However, the project is still in alpha stage. If you don't want to download Xcode, a build from 23/Jun/2020 is available [here](https://files.gitter.im/5ecde0a9d73408ce4fe4fe2d/jH7z/HeliPort_23_06.zip).
 
 ## KEXTs
 
@@ -70,13 +107,7 @@ These files are included in the `EFI` folder of this repository, however, I beli
 - VoodoHDA ([https://github.com/chris1111/VoodooHDA-2.9.2-Clover-V15](https://github.com/chris1111/VoodooHDA-2.9.2-Clover-V15))
 - itlwm ([https://github.com/zxystd/itlwm](https://github.com/zxystd/itlwm))
 
-## WiFi
 
-The WiFi network card used by this laptop is supported by [itlwm](https://github.com/zxystd/itlwm). 
-
-However, you will to manually specify the SSID & passwords of the networks you want to connect by modifying the `info.plist` file inside the `itlwm.kext` driver. 
-
-You can also use [HeliPort](https://github.com/zxystd/HeliPort) to manage your WiFi connections with [itlwm](https://github.com/zxystd/itlwm) as a normal user with a normal life. However, the project is still in alpha stage. If you don't want to download Xcode, a build from 23/Jun/2020 is available [here](https://files.gitter.im/5ecde0a9d73408ce4fe4fe2d/jH7z/HeliPort_23_06.zip).
 
 
 
