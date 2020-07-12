@@ -13,12 +13,8 @@ It is strongly recommended for you to extract the ACPI tables of your computer a
 ### Patches applied
 
 The patches that are applied to the DSDT are:
-- Fix _WAK Arg0 (v2)
 - Modified version of battery fix for HP G6 2221ss
-- SMBUS fix
-- IRQ Fix
-- RTC Fix
-- Windows 7, Windows 8, Windows 8.1 & Windows 10 OS checks
+- Windows 8 & Windows 8.1 OS checks
 - Enable GPI0 Controllers
 
 Brightness key fixes:
