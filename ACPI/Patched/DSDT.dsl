@@ -5,7 +5,7 @@
  * 
  * Disassembling to non-symbolic legacy ASL operators
  *
- * Disassembly of DSDT.aml, Sat Jul 11 21:13:19 2020
+ * Disassembly of DSDT.aml, Sun Jul 12 17:35:51 2020
  *
  * Original Table Header:
  *     Signature        "DSDT"
@@ -2730,21 +2730,6 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
             Device (D00B)
             {
                 Name (_ADR, 0x001F0003)  // _ADR: Address
-                Device (BUS0)
-                {
-                    Name (_CID, "smbus")
-                    Name (_ADR, Zero)
-                    Device (DVL0)
-                    {
-                        Name (_ADR, 0x57)
-                        Name (_CID, "diagsvault")
-                        Method (_DSM, 4, NotSerialized)
-                        {
-                            If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }
-                            Return (Package() { "address", 0x57 })
-                        }
-                    }
-                }
             }
 
             Device (RP01)
@@ -11807,7 +11792,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
             Store (0x07DD, OSYS) /* \OSYS */
             If (CondRefOf (\_OSI, Local0))
             {
-                If(LOr(_OSI("Darwin"),_OSI("Windows 2009")))
+                If (_OSI ("Windows 2009"))
                 {
                     Store (0x07D9, OSYS) /* \OSYS */
                 }
@@ -18564,23 +18549,45 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
         {
             Name (_HID, EisaId ("PNP0103") /* HPET System Timer */)  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
-            Name (BUF0, ResourceTemplate()
-{
-    IRQNoFlags() { 0, 8, 11, 15 }
-
+            Name (BUF0, ResourceTemplate ()
+            {
                 Memory32Fixed (ReadWrite,
                     0xFED00000,         // Address Base
                     0x00000400,         // Address Length
                     _Y31)
             })
-
-            
-
-            
-            Name (_STA, 0x0F)
-            Method (_CRS, 0, NotSerialized)
+            Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                Return (BUF0)
+                If (HPAE)
+                {
+                    Return (0x0F)
+                }
+
+                Return (Zero)
+            }
+
+            Method (_CRS, 0, Serialized)  // _CRS: Current Resource Settings
+            {
+                If (HPAE)
+                {
+                    CreateDWordField (BUF0, \_SB.PCI0.LPCB.HPET._Y31._BAS, HPT0)  // _BAS: Base Address
+                    If (LEqual (HPAS, One))
+                    {
+                        Store (0xFED01000, HPT0) /* \_SB_.PCI0.LPCB.HPET._CRS.HPT0 */
+                    }
+
+                    If (LEqual (HPAS, 0x02))
+                    {
+                        Store (0xFED02000, HPT0) /* \_SB_.PCI0.LPCB.HPET._CRS.HPT0 */
+                    }
+
+                    If (LEqual (HPAS, 0x03))
+                    {
+                        Store (0xFED03000, HPT0) /* \_SB_.PCI0.LPCB.HPET._CRS.HPT0 */
+                    }
+                }
+
+                Return (BUF0) /* \_SB_.PCI0.LPCB.HPET.BUF0 */
             }
         }
 
@@ -18691,7 +18698,8 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
                     0x01,               // Alignment
                     0x02,               // Length
                     )
-                
+                IRQNoFlags ()
+                    {2}
             })
         }
 
@@ -18862,9 +18870,10 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
                     0x0070,             // Range Minimum
                     0x0070,             // Range Maximum
                     0x01,               // Alignment
-                    0x02,               // Length
+                    0x08,               // Length
                     )
-                
+                IRQNoFlags ()
+                    {8}
             })
         }
 
@@ -18885,7 +18894,8 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
                     0x10,               // Alignment
                     0x04,               // Length
                     )
-                
+                IRQNoFlags ()
+                    {0}
             })
         }
 
