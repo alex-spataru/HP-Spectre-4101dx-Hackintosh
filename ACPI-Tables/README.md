@@ -12,7 +12,30 @@ It is strongly recommended for you to extract the ACPI tables of your computer a
 
 ### Patches applied
 
-TODO...
+The patches that are applied to the DSDT are:
+- Fix _WAK Arg0 (v2)
+- Modified version of battery fix for HP G6 2221ss
+- SMBUS fix
+- IRQ Fix
+- RTC Fix
+- Windows 7, Windows 8, Windows 8.1 & Windows 10 OS checks
+- Enable GPI0 Controllers
+
+Brightness key fixes:
+
+		# Brightness down
+		into method label _Q10 replace_content begin 
+		Notify(\_SB.PCI0.LPCB.PS2K, 0x0205)\n 
+		Notify(\_SB.PCI0.LPCB.PS2K, 0x0285)\n 
+		end; 
+
+		# Brightness up
+		into method label _Q11 replace_content begin
+		Notify(\_SB.PCI0.LPCB.PS2K, 0x0206)\n 
+		Notify(\_SB.PCI0.LPCB.PS2K, 0x0286)\n 
+		end;
+		
+**NOTE:** I have combined all patches in the `Patches.txt` file, just open that file from the Patch dialog in [MaciASL](https://github.com/acidanthera/MaciASL) and you're good to go
 
 ### System information
 
