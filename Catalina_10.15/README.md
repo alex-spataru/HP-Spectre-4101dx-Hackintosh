@@ -58,12 +58,6 @@ The computer is able to sleep, however, it automatically reboots after attemptin
     sudo pmset -a hibernatemode 0
     sudo pmset -a disablesleep 1
 
-## ACPI patching
-
-For the moment, you can find the compiled DSDT files in the `EFI/OC/ACPI` folder. Although [Dortania's Guide](https://dortania.github.io/Getting-Started-With-ACPI/) goes against including the DSDT patches, they were necessary for me to get the trackpad, battery and sound working.
-
-The rest of the patches are done according to the guide for Broadwell CPUs.
-
 ## KEXTs
 
 These files are included in the `EFI` folder of this repository, however, I believe that it's good practice to list them and their download sources:

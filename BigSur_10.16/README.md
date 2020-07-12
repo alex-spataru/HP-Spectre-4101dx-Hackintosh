@@ -83,10 +83,6 @@ I strongly recommend you to compile and use the latest versions of:
 
 Using a pre-compiled (release) version will not work since Big Sur requires diffent patches & modifications in order to work with your hardware.
 
-## ACPI patching
-
-The patches are done according to the guide for Broadwell CPUs. DSDT patch may be necessary to get Trackpad & battery status working.
-
 ## KEXTs
 
 These files are included in the `EFI` folder of this repository, however, I believe that it's good practice to list them and their download sources:

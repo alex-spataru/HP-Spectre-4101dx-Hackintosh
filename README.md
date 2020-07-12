@@ -11,6 +11,11 @@ OpenCore configuration files, installation guides and resources to run macOS on 
 
 **Note:** I got the computer to boot and work decently with Big Sur. However, the Big Sur project is on pause until the OS is more widely tested, I ran into many issues regarding the OS itself (rather than my Hackintosh config), any effort as of now could be invalidated in the near future with a substantial bug fix/update. For the momnent, I'll continue working on improving Catalina support.
 
+
+#### ACPI patching
+
+This computer requires you to load a patched DSDT on your OC installation to get the battery & trackpad to work. For more information, check the [ACPI](ACPI/) folder.
+
 #### Credits
 
 - [Apple](https://www.apple.com) for macOS  
