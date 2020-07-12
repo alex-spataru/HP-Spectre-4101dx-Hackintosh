@@ -23,17 +23,17 @@ The patches that are applied to the DSDT are:
 
 Brightness key fixes:
 
-		# Brightness down
-		into method label _Q10 replace_content begin 
-		Notify(\_SB.PCI0.LPCB.PS2K, 0x0205)\n 
-		Notify(\_SB.PCI0.LPCB.PS2K, 0x0285)\n 
-		end; 
+	# Brightness down
+	into method label _Q10 replace_content begin 
+	Notify(\_SB.PCI0.LPCB.PS2K, 0x0205)\n 
+	Notify(\_SB.PCI0.LPCB.PS2K, 0x0285)\n 
+	end; 
 
-		# Brightness up
-		into method label _Q11 replace_content begin
-		Notify(\_SB.PCI0.LPCB.PS2K, 0x0206)\n 
-		Notify(\_SB.PCI0.LPCB.PS2K, 0x0286)\n 
-		end;
+	# Brightness up
+	into method label _Q11 replace_content begin
+	Notify(\_SB.PCI0.LPCB.PS2K, 0x0206)\n 
+	Notify(\_SB.PCI0.LPCB.PS2K, 0x0286)\n 
+	end;
 		
 **NOTE:** I have combined all patches in the `Patches.txt` file, just open that file from the Patch dialog in [MaciASL](https://github.com/acidanthera/MaciASL) and you're good to go
 
