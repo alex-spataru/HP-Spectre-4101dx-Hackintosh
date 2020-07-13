@@ -103,8 +103,7 @@ These files are included in the `EFI` folder of this repository, however, I beli
 - Lilu ([https://github.com/acidanthera/Lilu](https://github.com/acidanthera/Lilu))
 - VoodooPS2 ([https://github.com/acidanthera/VoodooPS2](https://github.com/acidanthera/VoodooPS2))
 - WhateverGreen ([https://github.com/acidanthera/WhateverGreen](https://github.com/acidanthera/WhateverGreen))
-- ~AppleALC ([https://github.com/acidanthera/AppleALC](https://github.com/acidanthera/AppleALC))~ (audio works, microphone doesn't)
-- VoodoHDA ([https://github.com/chris1111/VoodooHDA-2.9.2-Clover-V15](https://github.com/chris1111/VoodooHDA-2.9.2-Clover-V15))
+- AppleALC ([https://github.com/acidanthera/AppleALC](https://github.com/acidanthera/AppleALC))
 - itlwm ([https://github.com/zxystd/itlwm](https://github.com/zxystd/itlwm))
 
 

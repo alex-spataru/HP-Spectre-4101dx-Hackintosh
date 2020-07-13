@@ -226,8 +226,10 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1b,0x0)</key>
 			<dict>
+				<key>alc-delay</key>
+				<integer>1000</integer>
 				<key>layout-id</key>
-				<integer>3</integer>
+				<integer>11</integer>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -388,9 +390,9 @@
 				<key>MinKernel</key>
 				<string></string>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/VoodooHDA</string>
+				<string>Contents/MacOS/AppleALC</string>
 				<key>BundlePath</key>
-				<string>VoodooHDA.kext</string>
+				<string>AppleALC.kext</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -680,7 +682,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-cdfon</string>
+				<string></string>
 				<key>prev-lang:kbd</key>
 				<string>en-US:0</string>
 			</dict>
