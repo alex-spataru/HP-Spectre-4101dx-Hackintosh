@@ -69,6 +69,10 @@ To setup fractional scaling, use [One-Key HiDPI](https://github.com/xzhih/one-ke
 
 **NOTE:** You may need to temporally disable SIP for the script to work.
 
+### CPU Power Management
+
+You can use [One-Key-CPUFriend](https://github.com/stevezhengshiqi/one-key-cpufriend) to generate your custom power management configuration. To avoid overheating & maintain fan noise low, I set the low frequency mode to 800 MHz.
+
 ### Disabling sleep
 
 The computer is able to sleep, however, it automatically reboots after attempting to wake it. Since I rarely use this function, the quick and dirty solution was to disable sleep with the following commands:
@@ -77,7 +81,6 @@ The computer is able to sleep, however, it automatically reboots after attemptin
     sudo pmset -a sleep 0
     sudo pmset -a hibernatemode 0
     sudo pmset -a disablesleep 1
-    
     
 ### Fixing Trackpad behavior
 
@@ -104,6 +107,7 @@ These files are included in the `EFI` folder of this repository, however, I beli
 - VoodooPS2 ([https://github.com/acidanthera/VoodooPS2](https://github.com/acidanthera/VoodooPS2))
 - WhateverGreen ([https://github.com/acidanthera/WhateverGreen](https://github.com/acidanthera/WhateverGreen))
 - AppleALC ([https://github.com/acidanthera/AppleALC](https://github.com/acidanthera/AppleALC))
+- CPUFriend ([https://github.com/acidanthera/CPUFriend](https://github.com/acidanthera/CPUFriend))
 - itlwm ([https://github.com/zxystd/itlwm](https://github.com/zxystd/itlwm))
 
 
