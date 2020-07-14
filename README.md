@@ -4,19 +4,25 @@ OpenCore configuration files, installation guides and resources to run macOS on 
 
 **Disclaimer:** This project is still in alpha/beta stage. Proceed at your own risk, and feel free to report issues and contribute to this guide :)
 
-#### Supported macOS versions
+### Folder structure
+
+- `ACPI` contains original, disassembled & patched DSDT/SSDT files, and a small patching guide
+- `Catalina` contains the EFI files & instalation guide for macOS Catalina
+- `Big Sur` contains the EFI file & instalation guide for macOS Big Sur
+- `Utilites` contains a pre-built version of HeliPort to manage your WiFi networks
+
+### Supported macOS versions
 
 - macOS Catalina (tested with 10.15.5 & 10.15.6, [instalation notes...](Catalina_10.15/))
 - macOS Big Sur (WIP, [instalation notes...](BigSur_10.16/))
 
 **Note:** I got the computer to boot and work decently with Big Sur. However, the Big Sur project is on pause until the OS is more widely tested, I ran into many issues regarding the OS itself (rather than my Hackintosh config), any effort as of now could be invalidated in the near future with a substantial bug fix/update. For the momnent, I'll continue working on improving Catalina support.
 
-
-#### ACPI patching
+### ACPI patching
 
 This computer requires you to load a patched DSDT on your OC installation to get the battery & trackpad to work. For more information, check the [ACPI](ACPI/) folder.
 
-#### Credits
+### Credits
 
 - [Apple](https://www.apple.com) for macOS  
 - [Acidanthera authors](https://github.com/acidanthera) for providing OpenCore, VirtualSMC, Lilu, WhateverGreen, AppleALC & VoodooPS2
