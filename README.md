@@ -8,7 +8,7 @@ OpenCore configuration files, installation guides and resources to run macOS on 
 
 - `ACPI` contains original, disassembled & patched DSDT/SSDT files, and a small patching guide.
 - `Install` contains the EFI files & installation guides for different versions of macOS.
-- `Utilites` contains a pre-built version of HeliPort to manage your WiFi networks.
+- `Utilites` contains a pre-built version of [HeliPort](https://github.com/OpenIntelWireless/HeliPort) to manage your WiFi networks.
 
 ### Supported macOS versions
 
