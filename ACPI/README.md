@@ -45,7 +45,7 @@ Go to the line that causes the error and delete the line that contains `Not (Arg
 
 This particular implementation makes little use of the `_OSI` method. Instead, it detects the OS at startup and changes the value of the `OSYS` variable at init. The default (fallback) operation mode is for Windows 10. We want to change that to Windows 7:
 
-![Code Changes](DefaultToWin7.png)
+![Code Changes](Images/DefaultToWin7.png)
 
 ### Insert ALC layout 11
 
