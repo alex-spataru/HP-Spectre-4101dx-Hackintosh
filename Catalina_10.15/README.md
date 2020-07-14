@@ -94,9 +94,7 @@ Once you set this, trackpad click should work as intended.
 
 The WiFi network card used by this laptop is supported by [itlwm](https://github.com/zxystd/itlwm). 
 
-However, you will to manually specify the SSID & passwords of the networks you want to connect by modifying the `info.plist` file inside the `itlwm.kext` driver. 
-
-You can also use [HeliPort](https://github.com/zxystd/HeliPort) to manage your WiFi connections with [itlwm](https://github.com/zxystd/itlwm) as a normal user with a normal life. However, the project is still in alpha stage. If you don't want to download Xcode, a build from 23/Jun/2020 is available [here](https://files.gitter.im/5ecde0a9d73408ce4fe4fe2d/jH7z/HeliPort_23_06.zip).
+You can use [HeliPort](https://github.com/zxystd/HeliPort) to manage your WiFi connections with [itlwm](https://github.com/zxystd/itlwm) as a normal user with a normal life. However, the project is still in alpha stage. If you don't want to download Xcode, I have provided a build in the [Utilities](../Utilities) folder.
 
 ## KEXTs
 
