@@ -1,4 +1,4 @@
-# ACPI Tables
+# ACPI DSDT Patching Guide
 
 This directory contains all the information necessary to patch your DSDT for correct operation of your machine.
 
