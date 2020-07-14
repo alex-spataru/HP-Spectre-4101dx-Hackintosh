@@ -45,7 +45,7 @@ Go to the line that causes the error and delete the line that contains `Not (Arg
 
 This particular implementation makes little use of the `_OSI` method. Instead, it detects the OS at startup and changes the value of the `OSYS` variable at init. The default (fallback) operation mode is for Windows 10. We want to change that to Windows 7:
 
-![Code Changes](Images/DefaultToWin7.png)
+![Code Changes](Screenshots/DefaultToWin7.png)
 
 ### Insert ALC layout 11
 
@@ -80,13 +80,13 @@ Layout 3 also works, however, the microphone only works when ALC layout is set t
     	})
 	}
 	
-![Code Changes](Images/InsertLayout11.png)
+![Code Changes](Screenshots/InsertLayout11.png)
 	
 ### Rename original `_DSM` method for `HDEF` device
 
 Navigate to `_SB.PCI0.HDEF`, and rename the `_DSM` method to `DSM`. This avoids the HDEF device to be switched automatically to I2S, which is not supported by macOS.
 
-![Code Changes](Images/RenameDSMMethod.png)
+![Code Changes](Screenshots/RenameDSMMethod.png)
 
 ### System information
 
