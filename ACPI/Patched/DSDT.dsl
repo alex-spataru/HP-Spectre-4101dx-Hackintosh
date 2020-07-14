@@ -5,7 +5,7 @@
  * 
  * Disassembling to non-symbolic legacy ASL operators
  *
- * Disassembly of DSDT.aml, Sun Jul 12 17:35:51 2020
+ * Disassembly of DSDT.aml, Tue Jul 14 13:19:44 2020
  *
  * Original Table Header:
  *     Signature        "DSDT"
@@ -10285,6 +10285,35 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
             {
                 Return (GPRW (0x6D, 0x04))
             }
+            
+            Method (_DSM, 4, NotSerialized) // _DSM: Insert layout 11 for AppleALC
+            {
+                If ((Arg2 == Zero))
+                {
+                    Return (Buffer (One)
+                    {
+                         0x03
+                    })
+                }
+
+                Return (Package (0x06)
+                {
+                    "layout-id", 
+                    Buffer (0x04)
+                    {
+                         0x0B, 0x00, 0x00, 0x00 
+                    }, 
+
+                    "hda-gfx", 
+                    Buffer (0x0A)
+                    {
+                        "onboard-1"
+                    }, 
+
+                    "PinConfigurations", 
+                    Buffer (Zero){}
+                })
+            }
         }
 
         Device (ADSP)
@@ -11789,20 +11818,20 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
 
         Method (_INI, 0, Serialized)  // _INI: Initialize
         {
-            Store (0x07DD, OSYS) /* \OSYS */
+            Store (0x07D9, OSYS) /* \OSYS */
             If (CondRefOf (\_OSI, Local0))
             {
-                If (_OSI ("Windows 2009"))
+                If(LOr(_OSI("Darwin"),_OSI("Windows 2009")))
                 {
                     Store (0x07D9, OSYS) /* \OSYS */
                 }
 
-                If(LOr(_OSI("Darwin"),_OSI("Windows 2012")))
+                If (_OSI ("Windows 2012"))
                 {
                     Store (0x07DC, OSYS) /* \OSYS */
                 }
 
-                If(LOr(_OSI("Darwin"),_OSI("Windows 2013")))
+                If (_OSI ("Windows 2013"))
                 {
                     Store (0x07DD, OSYS) /* \OSYS */
                 }
@@ -12908,7 +12937,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
 
     Scope (_SB.PCI0.HDEF)
     {
-        Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+        Method (DSM, 4, Serialized)  // DSM: Device-Specific Method
         {
             If (LEqual (Arg0, ToUUID ("c5c5d98d-360e-43af-b7c1-3ede8f669ad3")))
             {
@@ -25772,7 +25801,6 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
                         }
                         Else
                         {
-                            Not (Arg1, Arg1)
                             Increment (Arg1)
                             Store (^^LPCB.EC0.SMWR (0xC6, 0x50, 0x29, Arg1), Local0)
                         }

@@ -9,16 +9,15 @@ It is strongly recommended for you to extract the ACPI tables of your computer a
 - `Original` contains the files obtained from `/sys/firmware/acpi/tables/` from a Linux live USB.
 - `Disassembled` contains the disassembled DSDT file that results from running the `iasl -da -dl -fe refs.txt DSDT.aml SSDT*.aml` command.
 - `Patched` contains the patched DSDT file (both code and the assembled file) for correct system operation.
+- `Legacy` contains the DSDT that I patched the first time that I tried to Hackintosh this laptop. It works, but I never documented it, and it is for an older BIOS version.
 
 ### Patches applied
 
 The patches that are applied to the DSDT are:
 - Modified version of battery fix for HP G6 2221ss
-- Windows 8 & Windows 8.1 OS checks
+- Windows 7 OS checks
 - HPET, IRQ & RTC fixes
 - Enable GPI0 Controllers
-
-*Note:* This guide is still under progress. I still cannot get audio to work consistently with these patches.
 
 Brightness key fixes:
 
@@ -34,11 +33,60 @@ Brightness key fixes:
 	Notify(\_SB.PCI0.LPCB.PS2K, 0x0286)\n 
 	end;
 	
-Unfortunately, this is not the end of the story. You will need to do some manual hacking to resolve compiler issues.
+**NOTE:** I have combined all these patches in the `Patches.txt` file, just open that file from the Patch dialog in [MaciASL](https://github.com/acidanthera/MaciASL) and you're good to go.
+	
+Unfortunately, this is not the end of the story. You will need to do some manual hacking to resolve compiler issues and get audio to work:
 
-If you hit the compile button and get the `Result is not used, operator has no effect` error, go to the line that causes the error and replace `Not (Arg1)` with `Not (Arg1, Arg1)`.
+### Fix "Result is not used, operator has no effect" error
 
-**NOTE:** I have combined all patches in the `Patches.txt` file, just open that file from the Patch dialog in [MaciASL](https://github.com/acidanthera/MaciASL) and you're good to go
+Go to the line that causes the error and delete the line that contains `Not (Arg1)`.
+
+### Default to Windows 7 Power Management
+
+This particular implementation makes little use of the `_OSI` method. Instead, it detects the OS at startup and changes the value of the `OSYS` variable at init. The default (fallback) operation mode is for Windows 10. We want to change that to Windows 7:
+
+![Code Changes](DefaultToWin7.png)
+
+### Insert ALC layout 11
+
+Layout 3 also works, however, the microphone only works when ALC layout is set to 11. To insert layout 11, create the following `_DSM` method in `_SB.PCI0/HDEF`:
+
+	Method (_DSM, 4, NotSerialized) // _DSM: Insert layout 11 for AppleALC
+    {
+    	If ((Arg2 == Zero))
+        {
+        	Return (Buffer (One)
+            {
+            	0x03
+            })
+        }
+
+        Return (Package (0x06)
+        {
+        	"layout-id", 
+            Buffer (0x04)
+            {
+            	0x0B, 0x00, 0x00, 0x00 
+            }, 
+
+            "hda-gfx", 
+            Buffer (0x0A)
+            {
+            	"onboard-1"
+            }, 
+
+            "PinConfigurations", 
+            Buffer (Zero){}
+    	})
+	}
+	
+![Code Changes](Images/InsertLayout11.png)
+	
+### Rename original `_DSM` method for `HDEF` device
+
+Navigate to `_SB.PCI0.HDEF`, and rename the `_DSM` method to `DSM`. This avoids the HDEF device to be switched automatically to I2S, which is not supported by macOS.
+
+![Code Changes](Images/RenameDSMMethod.png)
 
 ### System information
 
