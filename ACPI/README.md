@@ -43,7 +43,7 @@ Go to the line that causes the error and delete the line that contains `Not (Arg
 
 ### Default to Windows 7 Power Management
 
-This particular implementation makes little use of the `_OSI` method. Instead, it detects the OS at startup and changes the value of the `OSYS` variable at init. The default (fallback) operation mode is for Windows 10. We want to change that to Windows 7:
+This particular implementation makes little use of the `_OSI` method. Instead, it detects the OS at startup and changes the value of the `OSYS` variable at init. The default (fallback) operation mode is for Windows 8.1. We want to change that to Windows 7:
 
 ![Code Changes](Screenshots/DefaultToWin7.png)
 
