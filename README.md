@@ -13,9 +13,7 @@ OpenCore configuration files, installation guides and resources to run macOS on 
 ### Supported macOS versions
 
 - macOS Catalina (tested with 10.15.5 & 10.15.6, [instalation notes...](Install/Catalina/))
-- macOS Big Sur (WIP, [instalation notes...](Install/BigSur/))
-
-**Note:** I got the computer to boot and work decently with Big Sur. However, the Big Sur project is on pause until the OS is more widely tested, I ran into many issues regarding the OS itself (rather than my Hackintosh config), any effort as of now could be invalidated in the near future with a substantial bug fix/update. For the momnent, I'll continue working on improving Catalina support.
+- macOS Big Sur (WIP - works as good as Catalina right now, [instalation notes...](Install/BigSur/))
 
 ### ACPI patching
 

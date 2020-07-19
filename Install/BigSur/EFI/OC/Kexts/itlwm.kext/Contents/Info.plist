@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>19G60d</string>
+	<string>19F101</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -42,6 +42,20 @@
 	<dict>
 		<key>itlwm</key>
 		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.zxystd.itlwm</string>
+			<key>IOClass</key>
+			<string>itlwm</string>
+			<key>IOMatchCategory</key>
+			<string>IODefaultMatchCategory</string>
+			<key>IOPCIPrimaryMatch</key>
+			<string>0x00008086&amp;0x0000ffff</string>
+			<key>IOProbeScore</key>
+			<integer>2000</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+			<key>IOUserClientClass</key>
+			<string>ItlNetworkUserClient</string>
 			<key>WiFiConfig</key>
 			<dict>
 				<key>WiFi_1</key>
@@ -49,14 +63,14 @@
 					<key>password</key>
 					<string>wYzux4k1vC</string>
 					<key>ssid</key>
-					<string>INFINITUM5B8B_2.4</string>
+					<string>INFINITUM5B8B_5</string>
 				</dict>
 				<key>WiFi_2</key>
 				<dict>
 					<key>password</key>
 					<string>wYzux4k1vC</string>
 					<key>ssid</key>
-					<string>INFINITUM5B8B_5</string>
+					<string>INFINITUM5B8B_2.4</string>
 				</dict>
 				<key>WiFi_3</key>
 				<dict>
@@ -73,20 +87,6 @@
 					<string>CMCC-KtG6</string>
 				</dict>
 			</dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.zxystd.itlwm</string>
-			<key>IOClass</key>
-			<string>itlwm</string>
-			<key>IOMatchCategory</key>
-			<string>IODefaultMatchCategory</string>
-			<key>IOPCIPrimaryMatch</key>
-			<string>0x00008086&amp;0x0000ffff</string>
-			<key>IOProbeScore</key>
-			<integer>2000</integer>
-			<key>IOProviderClass</key>
-			<string>IOPCIDevice</string>
-			<key>IOUserClientClass</key>
-			<string>ItlNetworkUserClient</string>
 		</dict>
 	</dict>
 	<key>LSMinimumSystemVersion</key>
