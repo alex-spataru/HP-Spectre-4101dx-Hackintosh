@@ -94,7 +94,9 @@ Once you set this, trackpad click should work as intended.
 
 The WiFi network card used by this laptop is supported by [itlwm](https://github.com/zxystd/itlwm). 
 
-You can use [HeliPort](https://github.com/zxystd/HeliPort) to manage your WiFi connections with [itlwm](https://github.com/zxystd/itlwm) as a normal user with a normal life. However, the project is still in alpha stage. If you don't want to download Xcode, I have provided a build in the [Utilities](../Utilities) folder.
+You can use [HeliPort](https://github.com/zxystd/HeliPort) to manage your WiFi connections with [itlwm](https://github.com/zxystd/itlwm) as a normal user with a normal life. However, the project is still in alpha stage.
+
+[Download HeliPort](https://github.com/OpenIntelWireless/HeliPort/releases)
 
 ## KEXTs
 
