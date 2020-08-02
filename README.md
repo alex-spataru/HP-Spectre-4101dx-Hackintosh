@@ -111,7 +111,7 @@ These files are included in the `EFI` folder of this repository, however, I beli
 - WhateverGreen ([https://github.com/acidanthera/WhateverGreen](https://github.com/acidanthera/WhateverGreen))
 - AppleALC ([https://github.com/acidanthera/AppleALC](https://github.com/acidanthera/AppleALC))
 - itlwm ([https://github.com/OpenIntelWireless/itlwm](https://github.com/OpenIntelWireless/itlwm))
-- IntelBluetoothFirmware ([https://github.com/OpenIntelWireless/IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
+- IntelBluetoothFirmware ([https://github.com/OpenIntelWireless/IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware))
 
 ### Credits
 
