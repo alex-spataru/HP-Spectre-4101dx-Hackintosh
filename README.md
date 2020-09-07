@@ -23,11 +23,11 @@ This computer requires you to load a patched DSDT on your OC installation to get
 - Touchpad (detected as Trackpad)
 - Battery percentage
 - Brightness, sound, airplane mode & other keyboard controls
-- Intel WiFi via (itlwm, requires manual SSID/password injection in kext's info.plist)
+- Intel WiFi via itlwm
 - Internal SSD (it still hasn't burned out or something after one year with Hackintosh and 3+ years of Windows/Linux)
 - Camera
 - Bluetooth
-- Audio via (VoodooHDA)
+- Audio
 
 ## In process
 
