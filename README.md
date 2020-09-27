@@ -93,13 +93,15 @@ Once that the trackpad preference pane is available, ensure that the "Force Clic
 
 Once you set this, trackpad click should work as intended.
       
-### WiFi Network management with HeliPort
+### WiFi
 
 The WiFi network card used by this laptop is supported by [itlwm](https://github.com/OpenIntelWireless/itlwm). 
 
 You can use [HeliPort](https://github.com/OpenIntelWireless/HeliPort) to manage your WiFi connections with [itlwm](https://github.com/OpenIntelWireless/itlwm) as a normal user with a normal life. However, the project is still in alpha stage.
 
-[Download HeliPort](https://github.com/OpenIntelWireless/HeliPort/releases)
+[Download HeliPort](https://github.com/OpenIntelWireless/HeliPort/releases).
+
+Additionally, you can use (https://github.com/OpenIntelWireless/itlwm/releases/download/v1.1.0/AirportItlwm_v1.0_Beta_BigSur.kext.zip)[AirportItlwm] for native Wi-Fi management. The EFI files contain the *AirportItlwm* implementation for macOS Big Sur. If you are using Catalina, please replace it.
 
 ## KEXTs
 
