@@ -286,24 +286,6 @@
 				<key>MinKernel</key>
 				<string></string>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/AirportItlwm</string>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>AirportItlwm.kext</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-				<key>Enabled</key>
-				<true/>
-				<key>MinKernel</key>
-				<string></string>
-				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AppleALC</string>
 				<key>Arch</key>
 				<string>Any</string>
@@ -322,11 +304,29 @@
 				<key>MinKernel</key>
 				<string></string>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/CodecCommander</string>
+				<string>Contents/MacOS/CPUFriend</string>
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
-				<string>CodecCommander.kext</string>
+				<string>CPUFriend.kext</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>Enabled</key>
+				<true/>
+				<key>MinKernel</key>
+				<string></string>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>EFICheckDisabler.kext</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -363,6 +363,42 @@
 				<string>Any</string>
 				<key>BundlePath</key>
 				<string>IntelBluetoothInjector.kext</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>Enabled</key>
+				<true/>
+				<key>MinKernel</key>
+				<string></string>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/NoTouchID</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>NoTouchID.kext</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>Enabled</key>
+				<true/>
+				<key>MinKernel</key>
+				<string></string>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/NullEthernet</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>NullEthernet.kext</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -417,6 +453,24 @@
 				<string>Any</string>
 				<key>BundlePath</key>
 				<string>SMCSuperIO.kext</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>Enabled</key>
+				<true/>
+				<key>MinKernel</key>
+				<string></string>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/USBInjectAll</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>USBInjectAll.kext</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -694,6 +748,8 @@
 			<string>Signed</string>
 			<key>EnablePassword</key>
 			<false/>
+			<key>SecureBootModel</key>
+			<string>Default</string>
 		</dict>
 		<key>Tools</key>
 		<array>
@@ -726,14 +782,12 @@
 			</dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
-				<key>SystemAudioVolume</key>
-				<data>Rg==</data>
 				<key>boot-args</key>
-				<string></string>
+				<string>-cdfon -igfxmlr darkwake=1 dart=0 gfxrst=1</string>
 				<key>prev-lang:kbd</key>
 				<string>en-US:0</string>
 				<key>csr-active-config</key>
-				<data>AwAAAA==</data>
+				<data>AAAAAA==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
