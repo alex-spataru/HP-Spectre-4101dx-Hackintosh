@@ -33,10 +33,9 @@ Complete reports:
 | Memory              | 8 GB 1600 MHz LPDDR3                                                                      |
 | Hard Disk           | AXNS381E-256GM-B Media.                                                                   |
 | Integrated Graphics | Intel® HD Graphics 5500                                                                   |
-| Screen              | JDI 3k Display @ 3000 x 2000 (13.9 inch)                                                  |
 | Sound Card          | Realtek ALC286                                                                            |
 | Wireless Card       | Intel Dual Band Wireless-AC 7265                                                          |
-| Display             | 13.3-inch diagonal Radiance Full HD (33) Infinity LED-backlit IPS touchscreen (1920x1080) |
+| Screen              | 13.3-inch diagonal Radiance Full HD (33) Infinity LED-backlit IPS touchscreen (1920x1080) |
 
 **Device Firmware** Bios version: `F.54 Rev. A`
 
