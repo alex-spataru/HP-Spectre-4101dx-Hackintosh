@@ -1,4 +1,9 @@
-# Hackintosh with HP Spectre x360 13
+<a href="#">
+    <img width="144px" height="144px" src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" align="right" />
+    <img width="144px" height="144px" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" align="right" />
+</a>
+
+# Hackintosh with HP Spectre 13-4101dx
 
 OpenCore configuration files, installation guides and resources to run macOS on the HP Spectre 13-4101dx (may work with similar devices, but there is no guarantee).
 
@@ -19,6 +24,22 @@ Complete reports:
 - CPU Bench: [https://browser.geekbench.com/v5/cpu/4136986](https://browser.geekbench.com/v5/cpu/4136986)
 - GPU Bench: [https://browser.geekbench.com/v5/compute/1629782](https://browser.geekbench.com/v5/compute/1629782)
 
+## Configuration
+
+| Specifications      | Details                                                                                   |
+|---------------------|-------------------------------------------------------------------------------------------|
+| Computer model      | HP Spectre x360 13-4101dx                                                                 |
+| Processor           | Intel Core i7-5500U Processor @ 2.4 GHz                                                   |
+| Memory              | 8 GB 1600 MHz LPDDR3                                                                      |
+| Hard Disk           | AXNS381E-256GM-B Media.                                                                   |
+| Integrated Graphics | Intel® HD Graphics 5500                                                                   |
+| Screen              | JDI 3k Display @ 3000 x 2000 (13.9 inch)                                                  |
+| Sound Card          | Realtek ALC286                                                                            |
+| Wireless Card       | Intel Dual Band Wireless-AC 7265                                                          |
+| Display             | 13.3-inch diagonal Radiance Full HD (33) Infinity LED-backlit IPS touchscreen (1920x1080) |
+
+**Device Firmware** Bios version: `F.54 Rev. A`
+
 ## Folder structure
 
 - `ACPI` contains original, disassembled & patched DSDT/SSDT files, and a small patching guide.
@@ -29,23 +50,21 @@ Complete reports:
 
 This computer requires you to load a patched DSDT on your OC installation to get the battery & trackpad to work. For more information, check the [ACPI](ACPI/) folder.
 
-## What works:
+## Progress
 
-- Display driver
-- HiDPI configuration
-- Touchpad (detected as Trackpad)
-- Battery percentage
-- Brightness, sound, airplane mode & other keyboard controls
-- Intel WiFi via itlwm
-- Internal SSD (it still hasn't burned out or something after one year with Hackintosh and 3+ years of Windows/Linux)
-- Camera
-- Bluetooth
-- Audio
-
-## In process
-
-- Touchscreen
-- Sleep
+- [x] Display driver
+- [x] HiDPI configuration
+- [x] Touchpad (detected as Trackpad)
+- [x] Battery percentage
+- [x] Brightness, sound, airplane mode & other keyboard controls
+- [x] Intel WiFi via itlwm
+- [x] Internal SSD (it still hasn't burned out or something after one year with Hackintosh and 3+ years of Windows/Linux)
+- [x] Camera
+- [x] Bluetooth
+- [x] Audio
+- [ ] Touchscreen
+- [ ] SD-Card reader
+- [ ] Sleep
 
 ## Installation Guide
 
@@ -116,17 +135,23 @@ You can use [HeliPort](https://github.com/OpenIntelWireless/HeliPort) to manage 
 
 Additionally, you can use (https://github.com/OpenIntelWireless/itlwm/releases/download/v1.1.0/AirportItlwm_v1.0_Beta_BigSur.kext.zip)[AirportItlwm] for native Wi-Fi management. The EFI files contain the *AirportItlwm* implementation for macOS Big Sur. If you are using Catalina, please replace it.
 
-## KEXTs
+## Update tracker
 
-These files are included in the `EFI` folder of this repository, however, I believe that it's good practice to list them and their download sources:
-
-- VirtualSMC ([https://github.com/acidanthera/VirtualSMC](https://github.com/acidanthera/VirtualSMC))
-- Lilu ([https://github.com/acidanthera/Lilu](https://github.com/acidanthera/Lilu))
-- VoodooPS2 ([https://github.com/acidanthera/VoodooPS2](https://github.com/acidanthera/VoodooPS2))
-- WhateverGreen ([https://github.com/acidanthera/WhateverGreen](https://github.com/acidanthera/WhateverGreen))
-- AppleALC ([https://github.com/acidanthera/AppleALC](https://github.com/acidanthera/AppleALC))
-- itlwm ([https://github.com/OpenIntelWireless/itlwm](https://github.com/OpenIntelWireless/itlwm))
-- IntelBluetoothFirmware ([https://github.com/OpenIntelWireless/IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware))
+| Item | Version | Remark |
+| :--- | :--- | :--- |
+| MacOS | 10.15.7 | |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.2 | Default Bootloader|
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.8 | Kext/process/framework/library patcher |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.3 | Handle Graphics card |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.3 | Handle/fix onboard audio |
+| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.2 | Power management |
+| [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 1.1.2 | Handle Bluetooth |
+| [itlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 1.1.0 | Handle WiFi with HeliPort app |
+| NullEthernet | 1.0.6 | |
+| [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID|
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.7 | Enable keyboard, alternative trackpad driver |
+| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.7 | SMC chip emulation |
+| [USBInjectAll](https://github.com/Sniki/OS-X-USB-Inject-All/releases) | 0.7.5 | Inject USB ports |
 
 ### Credits
 
