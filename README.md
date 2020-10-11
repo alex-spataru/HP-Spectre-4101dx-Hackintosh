@@ -1,5 +1,5 @@
 <a href="#">
-    <img width="144px" height="144px" src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" align="right" />
+    <!--<img width="144px" height="144px" src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" align="right" />-->
     <img width="144px" height="144px" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" align="right" />
 </a>
 
@@ -131,8 +131,6 @@ The WiFi network card used by this laptop is supported by [itlwm](https://github
 You can use [HeliPort](https://github.com/OpenIntelWireless/HeliPort) to manage your WiFi connections with [itlwm](https://github.com/OpenIntelWireless/itlwm) as a normal user with a normal life. However, the project is still in alpha stage.
 
 [Download HeliPort](https://github.com/OpenIntelWireless/HeliPort/releases).
-
-Additionally, you can use (https://github.com/OpenIntelWireless/itlwm/releases/download/v1.1.0/AirportItlwm_v1.0_Beta_BigSur.kext.zip)[AirportItlwm] for native Wi-Fi management. The EFI files contain the *AirportItlwm* implementation for macOS Big Sur. If you are using Catalina, please replace it.
 
 ## Update tracker
 
