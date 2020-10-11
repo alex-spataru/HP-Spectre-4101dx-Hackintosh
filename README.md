@@ -6,6 +6,19 @@ The files in this repository allow the computer to run macOS Catalina (latest ve
 
 **Disclaimer:** This project is still in alpha/beta stage. Proceed at your own risk, and feel free to report issues and contribute to this guide :)
 
+## Geekbench Scores
+
+| CPU Single-Core | CPU Multi-Core | OpenCL |
+|-----------------|----------------|--------|
+| 766             | 1508           | 2155   |
+
+Tests run on Geekbench 5.2.4 Tryout for macOS x86 (64-bit).
+
+Complete reports:
+
+- CPU Bench: [https://browser.geekbench.com/v5/cpu/4136986](https://browser.geekbench.com/v5/cpu/4136986)
+- GPU Bench: [https://browser.geekbench.com/v5/compute/1629782](https://browser.geekbench.com/v5/compute/1629782)
+
 ## Folder structure
 
 - `ACPI` contains original, disassembled & patched DSDT/SSDT files, and a small patching guide.
