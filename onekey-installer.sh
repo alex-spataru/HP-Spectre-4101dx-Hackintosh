@@ -33,13 +33,13 @@ function runScript()
     case "${lfm_selection}" in
     y)
     cd
-    cd Downloads/HP-Spectre-4101dx-Hackintosh-master
+    cd Downloads/HP-Spectre-4101dx-Hackintosh/HP-Spectre-4101dx-Hackintosh-master
     ./autoinstaller.command
     ;;
 
     n)
     cd
-    cd Downloads/HP-Spectre-4101dx-Hackintosh-master
+    cd Downloads/HP-Spectre-4101dx-Hackintosh/HP-Spectre-4101dx-Hackintosh-master
     exit
     ;;
 
