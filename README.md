@@ -5,7 +5,7 @@
 
 # Hackintosh with HP Spectre 13-4101dx
 
-OpenCore configuration files, installation guides and resources to run macOS on the HP Spectre 13-4101dx (may work with similar devices, but there is no guarantee).
+OpenCore configuration files, installation guides and resources to run macOS on the HP Spectre 13-4101dx.
 
 The files in this repository allow the computer to run macOS Catalina (latest version) & macOS Big Sur.
 
