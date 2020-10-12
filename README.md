@@ -11,6 +11,12 @@ The files in this repository allow the computer to run macOS Catalina (latest ve
 
 **Disclaimer:** This project is still in alpha/beta stage. Proceed at your own risk, and feel free to report issues and contribute to this guide :)
 
+### For quick post installation, run this in Terminal:
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/alex-spataru/HP-Spectre-4101dx-Hackintosh/master/onekey-installer.sh)"
+```
+
 ## Geekbench Scores
 
 | CPU Single-Core | CPU Multi-Core | OpenCL |
