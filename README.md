@@ -33,11 +33,11 @@ Complete reports:
 ## Configuration
 
 | Specifications      | Details                                                                                   |
-| :--- | :--- |
+|---------------------|-------------------------------------------------------------------------------------------|
 | Computer model      | HP Spectre x360 13-4101dx                                                                 |
 | Processor           | Intel Core i7-5500U Processor @ 2.4 GHz                                                   |
 | Memory              | 8 GB 1600 MHz LPDDR3                                                                      |
-| Hard Disk           | AXNS381E-256GM-B Media                                                                    |
+| Hard Disk           | AXNS381E-256GM-B                                                                          |
 | Integrated Graphics | Intel® HD Graphics 5500                                                                   |
 | Sound Card          | Realtek ALC286                                                                            |
 | Wireless Card       | Intel Dual Band Wireless-AC 7265                                                          |
