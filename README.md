@@ -3,6 +3,7 @@
     <img width="114px" height="114px" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Apple_Computer_Logo_rainbow.svg" align="right" />
 </a>
 
+
 # Hackintosh with HP Spectre 13-4101dx
 
 OpenCore configuration files, installation guides and resources to run macOS on the HP Spectre 13-4101dx.
