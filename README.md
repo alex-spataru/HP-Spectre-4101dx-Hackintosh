@@ -4,7 +4,7 @@
 </a>
 
 
-# Hackintosh with HP Spectre 13-4101dx
+# macOS on HP Spectre 13-4101dx
 
 OpenCore configuration files, installation guides and resources to run macOS on the HP Spectre 13-4101dx.
 
