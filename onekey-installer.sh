@@ -11,8 +11,6 @@ function downloadFiles()
 {
     cd
     cd Downloads
-    mkdir "HP-Spectre-4101dx-Hackintosh"
-    cd "HP-Spectre-4101dx-Hackintosh"
     echo "-------------------------------------------------"
     echo "| Downloading GitHub files into Downloads folder |"
     echo "-------------------------------------------------"
@@ -35,13 +33,13 @@ function runScript()
     case "${lfm_selection}" in
     y)
     cd
-    cd Downloads/HP-Spectre-4101dx-Hackintosh
+    cd Downloads/HP-Spectre-4101dx-Hackintosh-master
     ./autoinstaller.command
     ;;
 
     n)
     cd
-    cd Downloads/HP-Spectre-4101dx-Hackintosh
+    cd Downloads/HP-Spectre-4101dx-Hackintosh-master
     exit
     ;;
 

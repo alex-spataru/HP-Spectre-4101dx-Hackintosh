@@ -42,10 +42,10 @@ function checkFiles()
     else
         echo "Github EFI files not found in current directory"
         cd ~/Downloads
-        DIR=./HP-Spectre-4101dx-Hackintosh/EFI
+        DIR=./HP-Spectre-4101dx-Hackintosh-master/EFI
         if [ -d "$DIR" ]; then
             echo "Github files found in /Downloads"
-            cd ~/Downloads/HP-Spectre-4101dx-Hackintosh
+            cd ~/Downloads/HP-Spectre-4101dx-Hackintosh-master
             copyFiles
         else
             echo "Github files not found in /Downloads"
