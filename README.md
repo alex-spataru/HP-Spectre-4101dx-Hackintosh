@@ -1,6 +1,6 @@
 <a href="#">
-    <!--<img width="144px" height="144px" src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" align="right" />-->
-    <img width="144px" height="144px" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" align="right" />
+    <img width="114px" height="114px" src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" align="right">
+    <img width="114px" height="114px" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Apple_Computer_Logo_rainbow.svg" align="right" />
 </a>
 
 # Hackintosh with HP Spectre 13-4101dx
