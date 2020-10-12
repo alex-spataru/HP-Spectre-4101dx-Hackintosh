@@ -159,8 +159,9 @@ You can use [HeliPort](https://github.com/OpenIntelWireless/HeliPort) to manage 
 ### Credits
 
 - [Apple](https://www.apple.com) for macOS  
-- [Acidanthera authors](https://github.com/acidanthera) for providing OpenCore, VirtualSMC, Lilu, WhateverGreen, AppleALC & VoodooPS2
-- [OpenIntelWireless authors](https://github.com/OpenIntelWireless) for providing support for Intel WiFi cards to macOS
+- [Acidanthera authors](https://github.com/acidanthera) for providing OpenCore, VirtualSMC, Lilu, WhateverGreen, AppleALC & VoodooPS2.
+- [OpenIntelWireless authors](https://github.com/OpenIntelWireless) for providing support for Intel WiFi cards to macOS.
+- [gnodipac886](https://github.com/gnodipac886/MatebookXPro-hackintosh) for providing base code for auto-installation scripts.
 
 
 
