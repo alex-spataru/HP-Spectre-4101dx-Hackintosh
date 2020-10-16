@@ -801,7 +801,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>-cdfon -igfxmlr darkwake=1 dart=0 gfxrst=1</string>
+				<string>-cdfon -igfxmlr darkwake=1 dart=0 gfxrst=1 vm_compressor=2</string>
 				<key>prev-lang:kbd</key>
 				<string>en-US:0</string>
 				<key>csr-active-config</key>
