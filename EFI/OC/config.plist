@@ -868,11 +868,11 @@
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
-			<string>MacBookAir7,1</string>
+			<string>MacBookPro12,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02SR0BDGFWK</string>
+			<string>C02TN8ZRH1DP</string>
 			<key>SystemUUID</key>
-			<string>EB4B9A57-E219-420F-80B0-4F6A3296AEF2</string>
+			<string>81FE69D1-6CFA-4893-B0DE-6E254304CCED</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -1024,7 +1024,7 @@
 			<key>TscSyncTimeout</key>
 			<integer>0</integer>
 			<key>UnblockFsConnect</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>ReservedMemory</key>
 		<array>
