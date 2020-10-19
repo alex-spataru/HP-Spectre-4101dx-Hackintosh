@@ -155,6 +155,7 @@ You can use [HeliPort](https://github.com/OpenIntelWireless/HeliPort) to manage 
 | [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.7 | Enable keyboard, alternative trackpad driver |
 | [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.7 | SMC chip emulation |
 | [USBInjectAll](https://github.com/Sniki/OS-X-USB-Inject-All/releases) | 0.7.5 | Inject USB ports |
+| [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C) | 2.5.2 | Intel I2C drivers |
 
 ### Credits
 
