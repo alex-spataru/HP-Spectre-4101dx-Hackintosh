@@ -21,14 +21,14 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/alex-spataru/HP-Spectre-41
 
 | CPU Single-Core | CPU Multi-Core | OpenCL |
 |-----------------|----------------|--------|
-| 695             | 1632           | 2306   |
+| 766             | 1559           | 2535   |
 
 Tests run on Geekbench 5.2.4 Tryout for macOS x86 (64-bit).
 
 Complete reports:
 
-- CPU Bench: [https://browser.geekbench.com/v5/cpu/4210596](https://browser.geekbench.com/v5/cpu/4210596)
-- GPU Bench: [https://browser.geekbench.com/v5/compute/1653919](https://browser.geekbench.com/v5/compute/1653919)
+- CPU Bench: https://browser.geekbench.com/v5/cpu/4241356
+- GPU Bench: https://browser.geekbench.com/v5/compute/1664295
 
 ## Configuration
 
