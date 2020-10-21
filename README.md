@@ -69,7 +69,7 @@ This computer requires you to load a patched DSDT on your OC installation to get
 - [x] Bluetooth
 - [x] Audio
 - [ ] Touchscreen
-- [ ] SD-Card reader
+- [x] SD-Card reader
 - [ ] Sleep
 
 ## Installation Guide
@@ -157,6 +157,7 @@ You can use [HeliPort](https://github.com/OpenIntelWireless/HeliPort) to manage 
 | [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.7 | SMC chip emulation |
 | [USBInjectAll](https://github.com/Sniki/OS-X-USB-Inject-All/releases) | 0.7.5 | Inject USB ports |
 | [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C) | 2.5.2 | Intel I2C drivers |
+| [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx) | 2.3.0 | Realtek RTSX SD Card drivers |
 
 ### Credits
 
