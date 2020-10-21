@@ -38,10 +38,11 @@ Complete reports:
 | Processor           | Intel Core i7-5500U Processor @ 2.4 GHz                                                   |
 | Memory              | 8 GB 1600 MHz LPDDR3                                                                      |
 | Hard Disk           | AXNS381E-256GM-B                                                                          |
-| Integrated Graphics | Intel® HD Graphics 5500                                                                   |
+| Integrated Graphics | Intel HD Graphics 5500                                                                    |
 | Sound Card          | Realtek ALC286                                                                            |
 | Wireless Card       | Intel Dual Band Wireless-AC 7265                                                          |
 | Screen              | 13.3-inch diagonal Radiance Full HD (33) Infinity LED-backlit IPS touchscreen (1920x1080) |
+| SD Card Reader      | Realtek RTS5227 PCI Express Reader                                                        |
 
 **Device Firmware** Bios version: `F.54 Rev. A`
 
