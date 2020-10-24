@@ -768,6 +768,24 @@
 				<key>MinKernel</key>
 				<string></string>
 				<key>ExecutablePath</key>
+				<string>Contents/MacOS/VoodooI2CHID</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>VoodooI2CHID.kext</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooI2CSynaptics</string>
 				<key>Arch</key>
 				<string>Any</string>

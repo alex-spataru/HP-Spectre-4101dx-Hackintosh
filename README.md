@@ -56,7 +56,7 @@ Complete reports:
 
 This computer requires you to load a patched DSDT on your OC installation to get the battery & trackpad to work. For more information, check the [ACPI](ACPI/) folder.
 
-## Progress
+## Things that work
 
 - [x] Display driver
 - [x] Power management
@@ -69,9 +69,8 @@ This computer requires you to load a patched DSDT on your OC installation to get
 - [x] Camera
 - [x] Bluetooth
 - [x] Audio
-- [ ] Touchscreen
+- [x] Touchscreen
 - [x] SD-Card reader
-- [ ] Sleep
 
 ## Installation Guide
 
