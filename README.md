@@ -59,6 +59,7 @@ This computer requires you to load a patched DSDT on your OC installation to get
 ## Progress
 
 - [x] Display driver
+- [x] Power management
 - [x] HiDPI configuration
 - [x] Touchpad (detected as Trackpad)
 - [x] Battery percentage
