@@ -1,11 +1,11 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20200528 (64-bit version)
+ * AML/ASL+ Disassembler version 20200925 (64-bit version)
  * Copyright (c) 2000 - 2020 Intel Corporation
  * 
  * Disassembling to non-symbolic legacy ASL operators
  *
- * Disassembly of DSDT.aml, Tue Jul 14 13:19:44 2020
+ * Disassembly of DSDT.aml, Sat Oct 24 14:56:55 2020
  *
  * Original Table Header:
  *     Signature        "DSDT"
@@ -5851,7 +5851,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
                         Alias (SBV1, SDGV)
                         Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
                         {
-                            If (LEqual (Arg0, ToUUID ("a5fc708f-8775-4ba6-bd0c-ba90a1ec72f8")))
+                            If (LEqual (Arg0, ToUUID ("a5fc708f-8775-4ba6-bd0c-ba90a1ec72f8") /* Unknown UUID */))
                             {
                                 Switch (ToInteger (Arg2))
                                 {
@@ -5901,7 +5901,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
                         Alias (SBV2, SDGV)
                         Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
                         {
-                            If (LEqual (Arg0, ToUUID ("a5fc708f-8775-4ba6-bd0c-ba90a1ec72f8")))
+                            If (LEqual (Arg0, ToUUID ("a5fc708f-8775-4ba6-bd0c-ba90a1ec72f8") /* Unknown UUID */))
                             {
                                 Switch (ToInteger (Arg2))
                                 {
@@ -5951,7 +5951,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
                         Alias (SBV1, SDGV)
                         Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
                         {
-                            If (LEqual (Arg0, ToUUID ("a5fc708f-8775-4ba6-bd0c-ba90a1ec72f8")))
+                            If (LEqual (Arg0, ToUUID ("a5fc708f-8775-4ba6-bd0c-ba90a1ec72f8") /* Unknown UUID */))
                             {
                                 Switch (ToInteger (Arg2))
                                 {
@@ -6001,7 +6001,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
                         Alias (SBV2, SDGV)
                         Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
                         {
-                            If (LEqual (Arg0, ToUUID ("a5fc708f-8775-4ba6-bd0c-ba90a1ec72f8")))
+                            If (LEqual (Arg0, ToUUID ("a5fc708f-8775-4ba6-bd0c-ba90a1ec72f8") /* Unknown UUID */))
                             {
                                 Switch (ToInteger (Arg2))
                                 {
@@ -6143,7 +6143,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
                         Alias (SBV1, SDGV)
                         Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
                         {
-                            If (LEqual (Arg0, ToUUID ("a5fc708f-8775-4ba6-bd0c-ba90a1ec72f8")))
+                            If (LEqual (Arg0, ToUUID ("a5fc708f-8775-4ba6-bd0c-ba90a1ec72f8") /* Unknown UUID */))
                             {
                                 Switch (ToInteger (Arg2))
                                 {
@@ -6193,7 +6193,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
                         Alias (SBV2, SDGV)
                         Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
                         {
-                            If (LEqual (Arg0, ToUUID ("a5fc708f-8775-4ba6-bd0c-ba90a1ec72f8")))
+                            If (LEqual (Arg0, ToUUID ("a5fc708f-8775-4ba6-bd0c-ba90a1ec72f8") /* Unknown UUID */))
                             {
                                 Switch (ToInteger (Arg2))
                                 {
@@ -6727,7 +6727,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
 
             Method (CUID, 1, Serialized)
             {
-                If (LEqual (Arg0, ToUUID ("7c9512a9-1705-4cb4-af7d-506a2423ab71")))
+                If (LEqual (Arg0, ToUUID ("7c9512a9-1705-4cb4-af7d-506a2423ab71") /* Unknown UUID */))
                 {
                     Return (One)
                 }
@@ -10288,31 +10288,31 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
             
             Method (_DSM, 4, NotSerialized) // _DSM: Insert layout 11 for AppleALC
             {
-                If ((Arg2 == Zero))
+	            If ((Arg2 == Zero))
                 {
-                    Return (Buffer (One)
+    	            Return (Buffer (One)
                     {
-                         0x03
+        	            0x03
                     })
                 }
 
                 Return (Package (0x06)
                 {
-                    "layout-id", 
+    	            "layout-id", 
                     Buffer (0x04)
                     {
-                         0x0B, 0x00, 0x00, 0x00 
+        	            0x0B, 0x00, 0x00, 0x00 
                     }, 
 
                     "hda-gfx", 
                     Buffer (0x0A)
                     {
-                        "onboard-1"
+        	            "onboard-1"
                     }, 
 
                     "PinConfigurations", 
                     Buffer (Zero){}
-                })
+	            })
             }
         }
 
@@ -11098,7 +11098,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
 
             Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
             {
-                If (LEqual (Arg0, ToUUID ("5630831c-06c9-4856-b327-f5d32586e060")))
+                If (LEqual (Arg0, ToUUID ("5630831c-06c9-4856-b327-f5d32586e060") /* Unknown UUID */))
                 {
                     If (LEqual (Zero, ToInteger (Arg1)))
                     {
@@ -11818,10 +11818,10 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
 
         Method (_INI, 0, Serialized)  // _INI: Initialize
         {
-            Store (0x07D9, OSYS) /* \OSYS */
+            Store (0x07DD, OSYS) /* \OSYS */
             If (CondRefOf (\_OSI, Local0))
             {
-                If(LOr(_OSI("Darwin"),_OSI("Windows 2009")))
+                If (_OSI ("Windows 2009"))
                 {
                     Store (0x07D9, OSYS) /* \OSYS */
                 }
@@ -11831,7 +11831,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
                     Store (0x07DC, OSYS) /* \OSYS */
                 }
 
-                If (_OSI ("Windows 2013"))
+                If(LOr(_OSI("Darwin"),_OSI("Windows 2013")))
                 {
                     Store (0x07DD, OSYS) /* \OSYS */
                 }
@@ -12601,7 +12601,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
 
         Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
         {
-            If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37")))
+            If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37") /* Unknown UUID */))
             {
                 If (LEqual (Arg2, Zero))
                 {
@@ -12650,7 +12650,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
                     Return (Zero)
                 }
             }
-            ElseIf (LEqual (Arg0, ToUUID ("c5c5d98d-360e-43af-b7c1-3ede8f669ad3")))
+            ElseIf (LEqual (Arg0, ToUUID ("c5c5d98d-360e-43af-b7c1-3ede8f669ad3") /* Unknown UUID */))
             {
                 ADBG ("Audio Player call")
                 Switch (Arg2)
@@ -12877,7 +12877,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
             Name (_ADR, 0x00160000)  // _ADR: Address
             Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
             {
-                If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37")))
+                If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37") /* Unknown UUID */))
                 {
                     If (LEqual (Arg2, Zero))
                     {
@@ -12937,9 +12937,9 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
 
     Scope (_SB.PCI0.HDEF)
     {
-        Method (DSM, 4, Serialized)  // DSM: Device-Specific Method
+        Method (DSM, 4, Serialized)  // _DSM: Device-Specific Method
         {
-            If (LEqual (Arg0, ToUUID ("c5c5d98d-360e-43af-b7c1-3ede8f669ad3")))
+            If (LEqual (Arg0, ToUUID ("c5c5d98d-360e-43af-b7c1-3ede8f669ad3") /* Unknown UUID */))
             {
                 ADBG ("Audio Player call")
                 Switch (Arg2)
@@ -14802,7 +14802,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
 
             Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
             {
-                If (LEqual (Arg0, ToUUID ("b8febfe0-baf8-454b-aecd-49fb91137b21")))
+                If (LEqual (Arg0, ToUUID ("b8febfe0-baf8-454b-aecd-49fb91137b21") /* Unknown UUID */))
                 {
                     If (LEqual (Arg2, Zero))
                     {
@@ -14908,7 +14908,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
                     }
                 }
 
-                If (LEqual (Arg0, ToUUID ("c4eb40a0-6cd2-11e2-bcfd-0800200c9a66")))
+                If (LEqual (Arg0, ToUUID ("c4eb40a0-6cd2-11e2-bcfd-0800200c9a66") /* Unknown UUID */))
                 {
                     If (LEqual (Arg2, Zero))
                     {
@@ -16302,7 +16302,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
         {
             Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
             {
-                If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37")))
+                If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37") /* Unknown UUID */))
                 {
                     If (LEqual (Arg2, Zero))
                     {
@@ -16355,7 +16355,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
 
                     Return (Zero)
                 }
-                ElseIf (LEqual (Arg0, ToUUID ("7574eb17-d1a2-4cc2-9929-4a08fcc29107")))
+                ElseIf (LEqual (Arg0, ToUUID ("7574eb17-d1a2-4cc2-9929-4a08fcc29107") /* Unknown UUID */))
                 {
                     Switch (Arg2)
                     {
@@ -16527,7 +16527,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
     {
         Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
         {
-            If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37")))
+            If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37") /* Unknown UUID */))
             {
                 If (LEqual (Arg2, Zero))
                 {
@@ -16580,7 +16580,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
 
                 Return (Zero)
             }
-            ElseIf (LEqual (Arg0, ToUUID ("7574eb17-d1a2-4cc2-9929-4a08fcc29107")))
+            ElseIf (LEqual (Arg0, ToUUID ("7574eb17-d1a2-4cc2-9929-4a08fcc29107") /* Unknown UUID */))
             {
                 Switch (Arg2)
                 {
@@ -16751,7 +16751,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
     {
         Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
         {
-            If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37")))
+            If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37") /* Unknown UUID */))
             {
                 If (LEqual (Arg2, Zero))
                 {
@@ -16804,7 +16804,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
 
                 Return (Zero)
             }
-            ElseIf (LEqual (Arg0, ToUUID ("7574eb17-d1a2-4cc2-9929-4a08fcc29107")))
+            ElseIf (LEqual (Arg0, ToUUID ("7574eb17-d1a2-4cc2-9929-4a08fcc29107") /* Unknown UUID */))
             {
                 Switch (Arg2)
                 {
@@ -16975,7 +16975,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
     {
         Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
         {
-            If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37")))
+            If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37") /* Unknown UUID */))
             {
                 If (LEqual (Arg2, Zero))
                 {
@@ -17028,7 +17028,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
 
                 Return (Zero)
             }
-            ElseIf (LEqual (Arg0, ToUUID ("7574eb17-d1a2-4cc2-9929-4a08fcc29107")))
+            ElseIf (LEqual (Arg0, ToUUID ("7574eb17-d1a2-4cc2-9929-4a08fcc29107") /* Unknown UUID */))
             {
                 Switch (Arg2)
                 {
@@ -17201,7 +17201,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
         {
             Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
             {
-                If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37")))
+                If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37") /* Unknown UUID */))
                 {
                     If (LEqual (Arg2, Zero))
                     {
@@ -17254,7 +17254,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
 
                     Return (Zero)
                 }
-                ElseIf (LEqual (Arg0, ToUUID ("7574eb17-d1a2-4cc2-9929-4a08fcc29107")))
+                ElseIf (LEqual (Arg0, ToUUID ("7574eb17-d1a2-4cc2-9929-4a08fcc29107") /* Unknown UUID */))
                 {
                     Switch (Arg2)
                     {
@@ -17426,7 +17426,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
     {
         Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
         {
-            If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37")))
+            If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37") /* Unknown UUID */))
             {
                 If (LEqual (Arg2, Zero))
                 {
@@ -17479,7 +17479,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
 
                 Return (Zero)
             }
-            ElseIf (LEqual (Arg0, ToUUID ("7574eb17-d1a2-4cc2-9929-4a08fcc29107")))
+            ElseIf (LEqual (Arg0, ToUUID ("7574eb17-d1a2-4cc2-9929-4a08fcc29107") /* Unknown UUID */))
             {
                 Switch (Arg2)
                 {
@@ -17650,7 +17650,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
     {
         Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
         {
-            If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37")))
+            If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37") /* Unknown UUID */))
             {
                 If (LEqual (Arg2, Zero))
                 {
@@ -17703,7 +17703,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
 
                 Return (Zero)
             }
-            ElseIf (LEqual (Arg0, ToUUID ("7574eb17-d1a2-4cc2-9929-4a08fcc29107")))
+            ElseIf (LEqual (Arg0, ToUUID ("7574eb17-d1a2-4cc2-9929-4a08fcc29107") /* Unknown UUID */))
             {
                 Switch (Arg2)
                 {
@@ -17874,7 +17874,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
     {
         Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
         {
-            If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37")))
+            If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37") /* Unknown UUID */))
             {
                 If (LEqual (Arg2, Zero))
                 {
@@ -17927,7 +17927,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
 
                 Return (Zero)
             }
-            ElseIf (LEqual (Arg0, ToUUID ("7574eb17-d1a2-4cc2-9929-4a08fcc29107")))
+            ElseIf (LEqual (Arg0, ToUUID ("7574eb17-d1a2-4cc2-9929-4a08fcc29107") /* Unknown UUID */))
             {
                 Switch (Arg2)
                 {
@@ -18439,7 +18439,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
 
                 Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
                 {
-                    If (LEqual (Arg0, ToUUID ("f5cf0ff7-5d60-4842-82c0-fa1a61d873f2")))
+                    If (LEqual (Arg0, ToUUID ("f5cf0ff7-5d60-4842-82c0-fa1a61d873f2") /* Unknown UUID */))
                     {
                         Switch (ToInteger (Arg2))
                         {
@@ -25801,6 +25801,7 @@ DefinitionBlock ("", "DSDT", 2, "HPQOEM", "802D    ", 0x01072009)
                         }
                         Else
                         {
+                            Not (Arg1, Arg1)
                             Increment (Arg1)
                             Store (^^LPCB.EC0.SMWR (0xC6, 0x50, 0x29, Arg1), Local0)
                         }
@@ -28752,7 +28753,7 @@ Store(Arg3, SMWX) Store(ShiftRight(Arg3, 8), SMWY)  /* \_SB_.PCI0.LPCB.EC0_.SMW0
 
                 }
             }
-            ElseIf (LEqual (Arg0, ToUUID ("376054ed-cc13-4675-901c-4756d7f2d45d")))
+            ElseIf (LEqual (Arg0, ToUUID ("376054ed-cc13-4675-901c-4756d7f2d45d") /* Unknown UUID */))
             {
                 Switch (ToInteger (Arg2))
                 {
@@ -28790,12 +28791,12 @@ Store(Arg3, SMWX) Store(ShiftRight(Arg3, 8), SMWY)  /* \_SB_.PCI0.LPCB.EC0_.SMW0
                 }
             }
 
-            If (LEqual (Arg0, ToUUID ("cf8e16a5-c1e8-4e25-b712-4f54a96702c8")))
+            If (LEqual (Arg0, ToUUID ("cf8e16a5-c1e8-4e25-b712-4f54a96702c8") /* Unknown UUID */))
             {
                 Return (CRYF (Arg1, Arg2, Arg3))
             }
 
-            If (LEqual (Arg0, ToUUID ("6bbf6cab-5463-4714-b7cd-f0203c0368d4")))
+            If (LEqual (Arg0, ToUUID ("6bbf6cab-5463-4714-b7cd-f0203c0368d4") /* Unknown UUID */))
             {
                 Return (STRT (Arg1, Arg2, Arg3))
             }

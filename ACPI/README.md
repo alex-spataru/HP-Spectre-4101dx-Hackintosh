@@ -15,7 +15,7 @@ It is strongly recommended for you to extract the ACPI tables of your computer a
 
 The patches that are applied to the DSDT are:
 - Modified version of battery fix for HP G6 2221ss
-- Windows 7 OS checks
+- Windows 10 OS checks
 - HPET, IRQ & RTC fixes
 - Enable GPI0 Controllers
 
@@ -39,13 +39,7 @@ Unfortunately, this is not the end of the story. You will need to do some manual
 
 ### Fix "Result is not used, operator has no effect" error
 
-Go to the line that causes the error and delete the line that contains `Not (Arg1)`.
-
-### Default to Windows 7 Power Management
-
-This particular implementation makes little use of the `_OSI` method. Instead, it detects the OS at startup and changes the value of the `OSYS` variable at init. The default (fallback) operation mode is for Windows 8.1. We want to change that to Windows 7:
-
-![Code Changes](Screenshots/DefaultToWin7.png)
+Go to the line that causes the error and change the line that contains `Not (Arg1)` to Not (Arg1, Arg1)`.
 
 ### Insert ALC layout 11
 
