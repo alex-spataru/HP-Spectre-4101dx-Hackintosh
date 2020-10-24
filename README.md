@@ -48,13 +48,8 @@ Complete reports:
 
 ## Folder structure
 
-- `ACPI` contains original, disassembled & patched DSDT/SSDT files, and a small patching guide.
 - `EFI` contains the EFI files & installation guides for different versions of macOS.
 - `ICC` contains a ICC profile for the display, so that it reduces the "yellowish" colors by default on this laptop.
-
-## ACPI patching
-
-This computer requires you to load a patched DSDT on your OC installation to get the battery & trackpad to work. For more information, check the [ACPI](ACPI/) folder.
 
 ## Things that work
 
