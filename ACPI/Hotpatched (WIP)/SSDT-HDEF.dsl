@@ -20,15 +20,40 @@
  * THE SOFTWARE.
  */
 
-#ifndef NO_DEFINITIONBLOCK
-DefinitionBlock("", "SSDT", 2, "hack", "GPI0", 0)
+DefinitionBlock ("", "SSDT", 2, "SPAT", "HDEF", 0x00000000)
 {
-#endif
-    External (_SB_.PCI0.GPI0, DeviceObj)
-    
-    Scope (_SB.PCI0.GPI0)    {        
-        Method (_STA, 0, NotSerialized)        {            Return (0x0F)        }
+    External (_SB_.PCI0.HDEF, DeviceObj)
+
+    Scope (_SB.PCI0.HDEF)
+    {
+        Method (_DSM, 4, NotSerialized)  
+        {
+            If ((Arg2 == Zero))
+            {
+                Return (Buffer (One)
+                {
+                     0x03                                             
+                })
+            }
+
+            Return (Package (0x06)
+            {
+                "layout-id", 
+                Buffer (0x04)
+                {
+                     0x0B, 0x00, 0x00, 0x00                           
+                }, 
+
+                "hda-gfx", 
+                Buffer (0x0A)
+                {
+                    "onboard-1"
+                }, 
+
+                "PinConfigurations", 
+                Buffer (Zero){}
+            })
+        }
     }
-#ifndef NO_DEFINITIONBLOCK
 }
-#endif
+
