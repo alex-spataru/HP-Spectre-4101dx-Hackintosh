@@ -20,16 +20,24 @@
  * THE SOFTWARE.
  */
 
-DefinitionBlock ("", "SSDT", 2, "SPAT", "PCI0", 0x00000000)
+DefinitionBlock ("", "SSDT", 2, "SPAT", "BRIGHT", 0x00000000)
 {
-    External (_SB_.PCI0, DeviceObj)
-    External (OSYS, UnknownObj)
-    External (_PR.DTSE, UnknownObj)
-    External (_PR.DSAE, UnknownObj)
-
-    Scope (_SB.PCI0)
+    External(_SB.PCI0.LPCB.EC0, DeviceObj)
+    External(_SB.PCI0.LPCB.PS2K, DeviceObj)
+    
+    Scope(_SB.PCI0.LPCB.EC0)
     {
-        Method (_INI, 0, Serialized)        {            OSYS = 0x07DD            If (CondRefOf (\_PR.DTSE))            {                If ((\_PR.DTSE >= One))                {                    \_PR.DSAE = One                }            }        }
+        Method (_Q10, 0, NotSerialized)
+        {
+            Notify(\_SB.PCI0.LPCB.PS2K, 0x0205)
+            Notify(\_SB.PCI0.LPCB.PS2K, 0x0285)
+        }
+        
+        Method (_Q11, 0, NotSerialized)
+        {
+            Notify(\_SB.PCI0.LPCB.PS2K, 0x0206)
+            Notify(\_SB.PCI0.LPCB.PS2K, 0x0286)
+        }
     }
 }
 
