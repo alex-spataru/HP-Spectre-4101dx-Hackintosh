@@ -137,11 +137,14 @@ You can use [HeliPort](https://github.com/OpenIntelWireless/HeliPort) to manage 
 
 [Download HeliPort](https://github.com/OpenIntelWireless/HeliPort/releases).
 
-### Enable T.R.I.M.
+### Enable TRIM
 
-macOS does not enable T.R.I.M. for most SSDs, to enable T.R.I.M., run the following command (and reboot):
+By default, macOS does not enable TRIM for most SSDs. 
+To avoid damaging your SSD on the long term, enable TRIM with the following command:
 
 	sudo trimforce enable
+
+Before enabling TRIM, close all programs and documents (`trimforce` will reboot immediatly after finishing).
 
 ## Update tracker
 
