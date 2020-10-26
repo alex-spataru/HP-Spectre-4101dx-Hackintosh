@@ -77,6 +77,11 @@ function disableHibernation()
 
 }
 
+function enableTrim()
+{
+    sudo trimforce enable
+}
+
 function restart()
 {
     echo "----------------------"
@@ -108,6 +113,7 @@ function main()
     logo
     disableHibernation
     checkFiles
+    enableTrim
     restart
 }
 
