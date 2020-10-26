@@ -13,8 +13,6 @@ The files in this repository allow the computer to run macOS Catalina (latest ve
 Read the entire README before you start. 
 This project is still in alpha/beta stage. Proceed at your own risk, and feel free to report issues and contribute to this guide :)
 
-Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
-
 If you find this bootloader configuration useful, consider giving it a star to make it more visible.
 
 ### For quick post installation, run this in Terminal:
