@@ -10,8 +10,7 @@ The files in this repository allow the computer to run macOS Catalina (latest ve
 
 **Disclaimer:**
 
-Read the entire README before you start. 
-This project is still in alpha/beta stage. Proceed at your own risk, and feel free to report issues and contribute to this guide :)
+Read the entire README before you start, this project is still in alpha/beta stage. Proceed at your own risk, and feel free to report issues and contribute to this guide :)
 
 If you find this bootloader configuration useful, consider giving it a star to make it more visible.
 
@@ -25,13 +24,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/alex-spataru/HP-Spectre-41
 
 | CPU Single-Core | CPU Multi-Core | OpenCL |
 |-----------------|----------------|--------|
-| 774             | 1634           | 2535   |
+| 770             | 1645           | 2535   |
 
 Tests run on Geekbench 5.2.4 Tryout for macOS x86 (64-bit) on battery power.
 
 Complete reports:
 
-- CPU Bench: https://browser.geekbench.com/v5/cpu/4258087
+- CPU Bench: https://browser.geekbench.com/v5/cpu/4392218
 - GPU Bench: https://browser.geekbench.com/v5/compute/1664295
 
 ## Configuration
