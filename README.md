@@ -2,14 +2,20 @@
     <img width="114px" height="114px" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Apple_Computer_Logo_rainbow.svg" align="right" />
 </a>
 
-
 # macOS on HP Spectre 13-4101dx
 
 OpenCore configuration files, installation guides and resources to run macOS on the HP Spectre 13-4101dx.
 
 The files in this repository allow the computer to run macOS Catalina (latest version) & macOS Big Sur.
 
-**Disclaimer:** This project is still in alpha/beta stage. Proceed at your own risk, and feel free to report issues and contribute to this guide :)
+**Disclaimer:**
+
+Read the entire README before you start. 
+This project is still in alpha/beta stage. Proceed at your own risk, and feel free to report issues and contribute to this guide :)
+
+Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
+
+If you find this bootloader configuration useful, consider giving it a star to make it more visible.
 
 ### For quick post installation, run this in Terminal:
 
