@@ -92,12 +92,6 @@ Complete reports:
 
 ## Post Installation
 
-### Fix swapped CMD/Option keys
-
-The first time you boot the computer the `CMD` and `Option` keys will be switched. To fix this issue, open `Preferences/Keyboard/Modifier Keys` and switch the `CMD` and `Option` keys, be sure that you have selected `Keyboard` and not touch screen in the "Select Keyboard" combo box.
-
-![CMD Key Fix](Screenshots/CmdKeyFix.png)
-
 ### Setup EFI partition
 
 Mount your EFI partition, this can be done with the following terminal commands:
@@ -150,19 +144,15 @@ Before enabling TRIM, close all programs and documents (`trimforce` will reboot 
 
 | Item | Version | Remark |
 | :--- | :--- | :--- |
-| MacOS | 10.15.7 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.2 | Default Bootloader|
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.8 | Kext/process/framework/library patcher |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.3 | Handle Graphics card |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.3 | Handle/fix onboard audio |
+| MacOS | 11.0.1 | |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.4 | Default Bootloader|
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.0 | Kext/process/framework/library patcher |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.5 | Handle Graphics card |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.5 | Handle/fix onboard audio |
 | [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.2 | Power management |
-| [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 1.1.2 | Handle Bluetooth |
 | [itlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 1.1.0 | Handle WiFi with HeliPort app |
-| NullEthernet | 1.0.6 | |
-| [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID|
 | [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.7 | Enable keyboard, alternative trackpad driver |
-| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.7 | SMC chip emulation |
-| [USBInjectAll](https://github.com/Sniki/OS-X-USB-Inject-All/releases) | 0.7.5 | Inject USB ports |
+| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.9 | SMC chip emulation |
 | [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C) | 2.5.2 | Intel I2C drivers |
 | [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx) | 2.3.0 | Realtek RTSX SD Card drivers |
 
