@@ -66,15 +66,9 @@ function copyFiles()
     return
 }
 
-function disableHibernation()
+function fixHibernation()
 {
-    sudo pmset -a disksleep 0
-    sudo pmset -a sleep 0
-    sudo pmset -a hibernatemode 0
-    sudo pmset -a disablesleep 1
-    sudo pmset -a standby 0
-    sudo pmset -a autopoweroff 0
-
+    sudo pmset -a hibernatemode 3
 }
 
 function enableTrim()
@@ -111,7 +105,7 @@ esac
 function main()
 {
     logo
-    disableHibernation
+    fixHibernation
     checkFiles
     enableTrim
     restart

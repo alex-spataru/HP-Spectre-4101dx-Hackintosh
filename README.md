@@ -73,6 +73,7 @@ Complete reports:
 - [x] Audio
 - [x] Touchscreen
 - [x] SD-Card reader
+- [x] Sleep
 
 ## Installation Guide
 
@@ -110,14 +111,11 @@ To setup fractional scaling, use [One-Key HiDPI](https://github.com/xzhih/one-ke
 
 **NOTE:** Use the *dev* branch. The code in the *master* branch does not work for Big Sur yet.
 
-### Disabling sleep
+### Fixing sleep
 
-The computer is able to sleep, however, it automatically reboots after attempting to wake it. Since I rarely use this function, the quick and dirty solution was to disable sleep with the following commands:
+Ensure that `HibernationFixup.kext` is installed & run the following command on terminal:
 
-    sudo pmset -a disksleep 0
-    sudo pmset -a sleep 0
-    sudo pmset -a hibernatemode 0
-    sudo pmset -a disablesleep 1
+    sudo pmset -a hibernatemode 3
     
 ### Fixing Trackpad behavior
 
