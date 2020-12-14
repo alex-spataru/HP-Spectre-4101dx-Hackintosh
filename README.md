@@ -14,6 +14,10 @@ Read the entire README before you start, this project is still in alpha/beta sta
 
 If you find this bootloader configuration useful, consider giving it a star to make it more visible.
 
+### SMBIOS note
+
+I have removed my SMBIOS values from the repo to avoid getting into trouble with my Apple ID as more and more people use my OC configuration. Use [`GenSMBIOS`](https://github.com/corpnewt/GenSMBIOS) with `MacBookPro11,2` to generate your own MLB, Serial Number & UUID.
+
 ### For quick post installation, run this in Terminal:
 
 ```
@@ -62,7 +66,7 @@ Complete reports:
 - [x] Touchpad (detected as Trackpad)
 - [x] Battery percentage
 - [x] Brightness, sound, airplane mode & other keyboard controls
-- [x] Intel WiFi via itlwm
+- [x] Intel WiFi via AirportItlwm
 - [x] Internal SSD (it still hasn't burned out or something after one year with Hackintosh and 3+ years of Windows/Linux)
 - [x] Camera
 - [x] Bluetooth
@@ -122,14 +126,6 @@ Once that the trackpad preference pane is available, ensure that the "Force Clic
 ![Disable Haptic Feedback](Screenshots/DisableHapticFeedback.png)
 
 Once you set this, trackpad click should work as intended.
-      
-### WiFi
-
-The WiFi network card used by this laptop is supported by [itlwm](https://github.com/OpenIntelWireless/itlwm). 
-
-You can use [HeliPort](https://github.com/OpenIntelWireless/HeliPort) to manage your WiFi connections with [itlwm](https://github.com/OpenIntelWireless/itlwm) as a normal user with a normal life. However, the project is still in alpha stage.
-
-[Download HeliPort](https://github.com/OpenIntelWireless/HeliPort/releases).
 
 ### Enable TRIM
 
@@ -150,7 +146,7 @@ Before enabling TRIM, close all programs and documents (`trimforce` will reboot 
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.5 | Handle Graphics card |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.5 | Handle/fix onboard audio |
 | [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.2 | Power management |
-| [itlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 1.1.0 | Handle WiFi with HeliPort app |
+| [itlwm/AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 1.1.0 | Handle WiFi |
 | [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.7 | Enable keyboard, alternative trackpad driver |
 | [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.9 | SMC chip emulation |
 | [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C) | 2.5.2 | Intel I2C drivers |

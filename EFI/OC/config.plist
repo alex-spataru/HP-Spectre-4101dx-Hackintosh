@@ -50,8 +50,7 @@
 			</dict>
 		</array>
 		<key>Delete</key>
-		<array>
-		</array>
+		<array/>
 		<key>Patch</key>
 		<array>
 			<dict>
@@ -164,8 +163,7 @@
 	<key>Booter</key>
 	<dict>
 		<key>MmioWhitelist</key>
-		<array>
-		</array>
+		<array/>
 		<key>Quirks</key>
 		<dict>
 			<key>AvoidRuntimeDefrag</key>
@@ -232,6 +230,29 @@
 	</dict>
 	<key>Kernel</key>
 	<dict>
+		<key>Force</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Force IO80211Family to load (for AirportItlwm)</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/IO80211Family</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>/System/Library/Extensions/IO80211Family.kext</string>
+				<key>Identifier</key>
+				<string>com.apple.iokit.IO80211Family</string>
+			</dict>
+		</array>
 		<key>Add</key>
 		<array>
 			<dict>
@@ -710,8 +731,7 @@
 			<false/>
 		</dict>
 		<key>Patch</key>
-		<array>
-		</array>
+		<array/>
 		<key>Quirks</key>
 		<dict>
 			<key>AppleCpuPmCfgLock</key>
@@ -749,8 +769,7 @@
 	<key>Misc</key>
 	<dict>
 		<key>BlessOverride</key>
-		<array>
-		</array>
+		<array/>
 		<key>Boot</key>
 		<dict>
 			<key>ConsoleAttributes</key>
@@ -792,8 +811,7 @@
 			<integer>3</integer>
 		</dict>
 		<key>Entries</key>
-		<array>
-		</array>
+		<array/>
 		<key>Security</key>
 		<dict>
 			<key>AllowNvramReset</key>
@@ -819,7 +837,7 @@
 			<key>EnablePassword</key>
 			<false/>
 			<key>SecureBootModel</key>
-			<string>Default</string>
+			<string>j680</string>
 		</dict>
 		<key>Tools</key>
 		<array>
@@ -918,7 +936,7 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02416700GUFJQWCB</string>
+			<string></string>
 			<key>ROM</key>
 			<data>ESIzRFVm</data>
 			<key>SpoofVendor</key>
@@ -926,11 +944,11 @@
 			<key>SystemProductName</key>
 			<string>MacBookPro11,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02ML1ZMG86R</string>
+			<string></string>
 			<key>SystemUUID</key>
-			<string>8F1FDF91-824F-4116-A5A3-D76D1E8E22EB</string>
+			<string></string>
 			<key>SystemMemoryStatus</key>
-			<string>Auto</string>
+			<string>Soldered</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -1088,8 +1106,7 @@
 			<false/>
 		</dict>
 		<key>ReservedMemory</key>
-		<array>
-		</array>
+		<array/>
 	</dict>
 </dict>
 </plist>
