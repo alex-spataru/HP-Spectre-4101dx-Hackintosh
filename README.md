@@ -113,9 +113,12 @@ To setup fractional scaling, use [One-Key HiDPI](https://github.com/xzhih/one-ke
 
 ### Fixing sleep
 
-Ensure that `HibernationFixup.kext` is installed & run the following command on terminal:
+The computer is able to sleep, however, it automatically reboots after attempting to wake it. Since I rarely use this function, the quick and dirty solution was to disable sleep with the following commands:
 
-    sudo pmset -a hibernatemode 3
+     sudo pmset -a disksleep 0
+     sudo pmset -a sleep 0
+     sudo pmset -a hibernatemode 0
+     sudo pmset -a disablesleep 1
     
 ### Fixing Trackpad behavior
 
