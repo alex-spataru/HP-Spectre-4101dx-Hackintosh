@@ -95,6 +95,8 @@ Complete reports:
 1. Follow [CorpNewt's](https://github.com/corpnewt) excellent [Vanilla Installation Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) to get the macOS installer in your USB. **Skip the Clover installation**, we are going to use OpenCore.
 2. Open the USB's EFI partition and replace the contents with the data inside the `EFI` folder. At this moment, you should be able to install macOS without any major issues. 
 
+**NOTE:** On Big Sur 11.2, you may need to disable `AirportItlwm.kext` and `Sinetek-rtsx.kext` from loading. Also, it is a good idea to add the `-v` boot flag so that you can see what is happening. There will be several reboots, just hit the `macOS installer` and `Macintosh HD` boot keys in OC until you get to the welcome screen.
+
 ## Post Installation
 
 ### Setup EFI partition
@@ -141,17 +143,19 @@ Before enabling TRIM, close all programs and documents (`trimforce` will reboot 
 
 | Item | Version | Remark |
 | :--- | :--- | :--- |
-| MacOS | 11.0.1 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.4 | Default Bootloader|
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.0 | Kext/process/framework/library patcher |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.5 | Handle Graphics card |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.5 | Handle/fix onboard audio |
-| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.2 | Power management |
-| [itlwm/AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 1.1.0 | Handle WiFi |
-| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.7 | Enable keyboard, alternative trackpad driver |
-| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.9 | SMC chip emulation |
-| [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C) | 2.5.2 | Intel I2C drivers |
-| [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx) | 2.3.0 | Realtek RTSX SD Card drivers |
+| MacOS | 11.2 | |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.6 | Default Bootloader|
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.1 | Kext/process/framework/library patcher |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.7 | Handle Graphics card |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.7 | Handle/fix onboard audio |
+| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.3 | Power management |
+| [itlwm/AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 1.3.0 | Handle WiFi |
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.2.1 | Enable keyboard, alternative trackpad driver |
+| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.2.0 | SMC chip emulation |
+| [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C/releases) | 2.6.4 | Intel I2C drivers |
+| [IntelBluetooth](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/) | 0.0.0 | Bluetooth drivers |
+| [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx/releases) | 2.4.0 | Realtek RTSX SD Card drivers |
+| [VoodooSMBus](https://github.com/VoodooSMBus/VoodooSMBus/releases) | 2.2.0 | i801 SMBus support |
 
 ### Credits
 
