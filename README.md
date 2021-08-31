@@ -144,17 +144,17 @@ Before enabling TRIM, close all programs and documents (`trimforce` will reboot 
 | Item | Version | Remark |
 | :--- | :--- | :--- |
 | MacOS                                                                                   | 11.2.3 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases)                         | 0.6.8  | Default Bootloader|
-| [Lilu](https://github.com/acidanthera/Lilu/releases)                                    | 1.5.2  | Kext/process/framework/library patcher |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases)                  | 1.4.9  | Handle Graphics card |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases)                            | 1.5.9  | Handle/fix onboard audio |
-| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases)                          | 1.2.3  | Power management |
-| [itlwm/AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases)               | 1.2.0  | Handle WiFi |
-| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases)                | 2.2.2  | Enable keyboard, alternative trackpad driver |
-| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases)              | 1.2.2  | SMC chip emulation |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases)                         | 0.7.2  | Default Bootloader|
+| [Lilu](https://github.com/acidanthera/Lilu/releases)                                    | 1.5.5  | Kext/process/framework/library patcher |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases)                  | 1.5.2  | Handle Graphics card |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases)                            | 1.6.3  | Handle/fix onboard audio |
+| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases)                          | 1.2.4  | Power management |
+| [itlwm/AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases)               | 2.1.0  | Handle WiFi |
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases)                | 2.2.4  | Enable keyboard, alternative trackpad driver |
+| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases)              | 1.2.6  | SMC chip emulation |
 | [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C/releases)                            | 2.6.5  | Intel I2C drivers |
-| [IntelBluetooth](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/) | 1.1.2  | Bluetooth drivers |
-| [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx/releases)                       | 2.4.0  | Realtek RTSX SD Card drivers |
+| [IntelBluetooth](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/) | 2.0.0  | Bluetooth drivers |
+| [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx/releases)                       | 9.0  | Realtek RTSX SD Card drivers |
 | [VoodooSMBus](https://github.com/VoodooSMBus/VoodooSMBus/releases)                      | 2.2.0  | i801 SMBus support |
 
 ### Credits
