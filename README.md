@@ -16,7 +16,7 @@ If you find this bootloader configuration useful, consider giving it a star to m
 
 ### SMBIOS note
 
-I have removed my SMBIOS values from the repo to avoid getting into trouble with my Apple ID as more and more people use my OC configuration. Use [`GenSMBIOS`](https://github.com/corpnewt/GenSMBIOS) with `MacBookPro11,2` to generate your own MLB, Serial Number & UUID.
+I have removed my SMBIOS values from the repo to avoid getting into trouble with my Apple ID as more and more people use my OC configuration. Use [`GenSMBIOS`](https://github.com/corpnewt/GenSMBIOS) with `MacBookPro12,1` to generate your own MLB, Serial Number & UUID.
 
 ### For quick post installation, run this in Terminal:
 
