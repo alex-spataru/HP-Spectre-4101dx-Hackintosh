@@ -353,6 +353,8 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
+<<<<<<< HEAD
+=======
 				<string>IntelBluetoothInjector.kext</string>
 				<key>Comment</key>
 				<string>IntelBluetoothInjector.kext</string>
@@ -371,6 +373,7 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
+>>>>>>> 2183178939c96eaa295f3f9958ac438484bbea7a
 				<string>Lilu.kext</string>
 				<key>Comment</key>
 				<string>Lilu.kext</string>
@@ -612,6 +615,24 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AppleALC</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>BlueToolFixup.kext</string>
+				<key>Comment</key>
+				<string>BlueToolFixup.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/BlueToolFixup</string>
 				<key>Arch</key>
 				<string>Any</string>
 				<key>MaxKernel</key>
