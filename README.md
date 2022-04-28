@@ -139,6 +139,12 @@ To avoid damaging your SSD on the long term, enable TRIM with the following comm
 
 Before enabling TRIM, close all programs and documents (`trimforce` will reboot immediatly after finishing).
 
+### (Optional) Permanently disable Gatekeeper
+
+As a cross-platform app developer, I test & install CI apps on a daily basis. So I really hate the "AppName can't be opened because it's from an unidentified developer" message. To disable it, run the following command on a terminal:
+
+	sudo spctl --master-disable
+
 ## Update tracker
 
 | Item | Version | Remark |
